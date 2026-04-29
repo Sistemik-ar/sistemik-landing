@@ -71,18 +71,64 @@
   .hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 2.5rem 4rem; position: relative; overflow: hidden; }
   .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 55% 55% at 75% 25%, rgba(26,107,255,0.14) 0%, transparent 65%), radial-gradient(ellipse 40% 40% at 20% 75%, rgba(200,241,53,0.07) 0%, transparent 55%); pointer-events: none; }
   .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 56px 56px; pointer-events: none; }
-  .hero-content { position: relative; max-width: 780px; }
-  .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--blue-dim); border: 1px solid var(--blue-border); color: #6B9FFF; font-size: 0.78rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 1.5rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; width: 100%; max-width: 1400px; }
+  .hero-content { position: relative; }
+
+  /* DASHBOARD MOCKUP */
+  .hero-visual { position: relative; padding: 2.5rem 1rem; }
+  .dash { background: var(--ink-2); border: 1px solid var(--border); border-radius: 20px; padding: 1.25rem; box-shadow: 0 40px 100px rgba(0,0,0,0.5), 0 0 60px rgba(26,107,255,0.06); transform: perspective(1000px) rotateY(-4deg) rotateX(2deg); }
+  .dash-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+  .dash-title { font-family: 'Geist', sans-serif; font-weight: 700; font-size: 0.88rem; }
+  .dash-subtitle { font-size: 0.68rem; color: var(--muted); margin-top: 0.15rem; }
+  .dash-live { display: flex; align-items: center; gap: 0.35rem; font-size: 0.7rem; font-weight: 600; color: #25D366; }
+  .live-dot { width: 6px; height: 6px; background: #25D366; border-radius: 50%; animation: livePulse 2s infinite; flex-shrink: 0; }
+  @keyframes livePulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.8)} }
+  .dash-kpis { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.5rem; margin-bottom: 1rem; }
+  .kpi { background: var(--ink-3); border-radius: 10px; padding: 0.65rem 0.75rem; border: 1px solid var(--border); }
+  .kpi-label { font-size: 0.62rem; color: var(--muted); margin-bottom: 0.2rem; font-weight: 500; }
+  .kpi-val { font-family: 'Geist', sans-serif; font-size: 0.95rem; font-weight: 800; letter-spacing: -0.02em; }
+  .kpi-delta { font-size: 0.63rem; font-weight: 600; margin-top: 0.2rem; }
+  .kpi-delta.up { color: #25D366; }
+  .kpi-delta.down { color: #FF5040; }
+  .dash-chart { margin-bottom: 1rem; }
+  .chart-label { font-size: 0.65rem; color: var(--muted); margin-bottom: 0.6rem; font-weight: 500; }
+  .chart-bars { display: flex; align-items: flex-end; gap: 0.3rem; height: 80px; }
+  .bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.25rem; height: 100%; justify-content: flex-end; }
+  .bar { width: 100%; background: var(--blue-dim); border: 1px solid var(--blue-border); border-radius: 4px 4px 0 0; height: var(--h); animation: barFill 0.7s ease both; }
+  .bar.active { background: rgba(26,107,255,0.45); border-color: var(--blue); box-shadow: 0 0 12px rgba(26,107,255,0.3); }
+  .bar-wrap span { font-size: 0.58rem; color: var(--muted); }
+  @keyframes barFill { from { height: 0 } to { height: var(--h) } }
+  .bar-wrap:nth-child(1) .bar { animation-delay: 0.05s } .bar-wrap:nth-child(2) .bar { animation-delay: 0.1s }
+  .bar-wrap:nth-child(3) .bar { animation-delay: 0.15s } .bar-wrap:nth-child(4) .bar { animation-delay: 0.2s }
+  .bar-wrap:nth-child(5) .bar { animation-delay: 0.25s } .bar-wrap:nth-child(6) .bar { animation-delay: 0.3s }
+  .bar-wrap:nth-child(7) .bar { animation-delay: 0.35s }
+  .dash-ai { display: flex; gap: 0.65rem; background: rgba(200,241,53,0.06); border: 1px solid rgba(200,241,53,0.18); border-radius: 12px; padding: 0.85rem; }
+  .dash-ai-icon { font-size: 1rem; color: var(--lime); flex-shrink: 0; line-height: 1.4; }
+  .dash-ai-title { font-size: 0.63rem; font-weight: 700; color: var(--lime); letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 0.25rem; }
+  .dash-ai-text { font-size: 0.74rem; color: rgba(248,250,255,0.55); line-height: 1.55; }
+
+  /* FLOATING CARDS */
+  .float-card { position: absolute; background: var(--ink-2); border: 1px solid var(--border); border-radius: 14px; padding: 0.75rem 1rem; box-shadow: 0 12px 32px rgba(0,0,0,0.45), 0 0 0 1px var(--border); backdrop-filter: blur(8px); z-index: 2; }
+  .fc-sale { top: 0; left: -1rem; animation: fcFloat 0.6s 0.3s ease both; }
+  .fc-ai { bottom: 0; right: -1rem; animation: fcFloat 0.6s 0.5s ease both; }
+  @keyframes fcFloat { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:translateY(0) } }
+  .fc-row { display: flex; align-items: center; gap: 0.5rem; }
+  .fc-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .fc-label { font-size: 0.65rem; color: var(--muted); font-weight: 500; margin-bottom: 0.2rem; }
+  .fc-value { font-family: 'Geist', sans-serif; font-size: 0.88rem; font-weight: 700; }
+  .fc-sub { font-size: 0.65rem; color: var(--muted); margin-top: 0.15rem; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--blue-dim); border: 1px solid var(--blue-border); color: #6B9FFF; font-size: 0.78rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 1.5rem; letter-spacing: 0.06em; text-transform: uppercase; max-width: 100%; overflow: hidden; }
+  .hero-badge span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .badge-dot { width: 6px; height: 6px; background: var(--lime); border-radius: 50%; display: inline-block; flex-shrink: 0; }
   h1 { font-family: 'Geist', sans-serif; font-weight: 800; font-size: clamp(3.2rem, 7.5vw, 6rem); line-height: 0.95; letter-spacing: -0.04em; margin-bottom: 1.75rem; }
   h1 em { font-style: normal; color: var(--lime); }
   .hero-sub { font-size: 1.1rem; color: rgba(248,250,255,0.6); max-width: 500px; line-height: 1.8; margin-bottom: 2.5rem; font-weight: 400; }
   .hero-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
-  .hero-stats { margin-top: 3.5rem; padding-top: 3rem; border-top: 1px solid var(--border); display: flex; gap: 0; flex-wrap: wrap; }
-  .hero-stats > div { padding: 0 2.5rem; border-left: 1px solid var(--border); }
+  .hero-stats { margin-top: 3.5rem; padding-top: 3rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: repeat(3, 1fr); }
+  .hero-stats > div { padding: 0 1.5rem; border-left: 1px solid var(--border); text-align: center; }
   .hero-stats > div:first-child { padding-left: 0; border-left: none; }
-  .stat-num { font-family: 'Geist', sans-serif; font-size: clamp(2.6rem, 5vw, 3.8rem); font-weight: 800; color: var(--lime); line-height: 1; letter-spacing: -0.03em; }
-  .stat-label { font-size: 0.82rem; color: rgba(248,250,255,0.5); margin-top: 0.4rem; font-weight: 500; letter-spacing: 0.01em; }
+  .stat-num { font-family: 'Geist', sans-serif; font-size: clamp(2.6rem, 5vw, 3.8rem); font-weight: 800; color: var(--lime); line-height: 1; letter-spacing: -0.03em; text-align: center; }
+  .stat-label { font-size: 0.82rem; color: rgba(248,250,255,0.5); margin-top: 0.4rem; font-weight: 500; letter-spacing: 0.01em; text-align: center; }
 
   /* SERVICIOS */
   #services { border-top: 1px solid var(--border); }
@@ -123,8 +169,8 @@
   .work-tag.green { background: rgba(200,241,53,0.08); border-color: rgba(200,241,53,0.2); color: var(--lime); }
   .work-card h3 { font-family: 'Geist', sans-serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
   .work-card p { font-size: 0.83rem; color: rgba(248,250,255,0.5); line-height: 1.7; margin-bottom: 1.1rem; }
-  .work-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #6B9FFF; text-decoration: none; transition: color 0.2s; }
-  .work-link:hover { color: var(--white); }
+  .work-link { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: #6B9FFF; text-decoration: none; padding: 0.55rem 1.1rem; border: 1px solid var(--blue-border); border-radius: 100px; background: var(--blue-dim); transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s; }
+  .work-link:hover { background: rgba(26,107,255,0.22); border-color: var(--blue); color: var(--white); transform: translateY(-2px); }
 
   /* CALENDARIO */
   #calendar { border-top: 1px solid var(--border); }
@@ -176,11 +222,42 @@
   .hero-actions { animation: fadeUp 0.5s 0.3s ease both; }
   .hero-stats { animation: fadeUp 0.5s 0.4s ease both; }
 
+  @media (min-width: 1600px) {
+    .hero-inner { max-width: 1700px; }
+    .dash { padding: 1.75rem; }
+    .kpi-val { font-size: 1.15rem; }
+    .chart-bars { height: 110px; }
+    .dash-title { font-size: 1rem; }
+    .dash-ai-text { font-size: 0.82rem; }
+  }
+  @media (min-width: 2200px) {
+    .hero-inner { max-width: 2000px; }
+    .dash { padding: 2rem; }
+    .kpi-val { font-size: 1.3rem; }
+    .chart-bars { height: 130px; }
+  }
+
   /* RESPONSIVE */
   @media (max-width: 768px) {
-    nav { padding: 1rem 1.25rem; }
+    nav { padding: 0.85rem 1.25rem; }
     .nav-links { display: none; }
+    .nav-cta { padding: 0.45rem 0.9rem; font-size: 0.8rem; }
+    .lang-btn { padding: 0.25rem 0.55rem; font-size: 0.72rem; }
+    .logo-name { font-size: 1rem; }
+    nav svg { width: 26px; height: 26px; }
+    .hero-badge { font-size: 0.68rem; padding: 0.35rem 0.75rem; white-space: nowrap; overflow: hidden; max-width: 100%; }
     .hero { padding: 5.5rem 1.25rem 3rem; min-height: auto; }
+    .hero-content { text-align: center; }
+    .hero-badge { margin-left: auto; margin-right: auto; }
+    #geo-text { margin-left: auto; margin-right: auto; }
+    .hero-sub { max-width: 100%; margin-left: auto; margin-right: auto; }
+    .hero-actions { justify-content: center; }
+    .hero-stats { justify-content: center; }
+    .hero-stats > div { text-align: center; }
+    .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; width: 100%; }
+    .dash { transform: none; }
+    .hero-visual { width: 100%; min-width: 0; padding: 0; }
+    .float-card { display: none; }
     section { padding: 4rem 1.25rem; }
     h1 { font-size: clamp(2rem, 10vw, 3rem); line-height: 1.08; letter-spacing: -0.02em; }
     h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
@@ -191,9 +268,21 @@
   }
   @media (max-width: 480px) {
     .services-grid { grid-template-columns: 1fr; }
-    .hero-stats { flex-direction: column; gap: 0; }
-    .hero-stats > div { padding: 1.1rem 0; border-left: none; border-top: 1px solid var(--border); width: 100%; }
+    .hero-stats { grid-template-columns: 1fr; }
+    .hero-stats > div { padding: 1.1rem 0; border-left: none; border-top: 1px solid var(--border); text-align: center; }
     .hero-stats > div:first-child { border-top: none; padding-top: 0; }
+    .dash { padding: 0.9rem; }
+    .dash-title { font-size: 0.8rem; }
+    .dash-subtitle { font-size: 0.62rem; }
+    .dash-kpis { gap: 0.35rem; }
+    .kpi { padding: 0.5rem 0.55rem; }
+    .kpi-val { font-size: 0.82rem; }
+    .kpi-label { font-size: 0.58rem; }
+    .kpi-delta { font-size: 0.58rem; }
+    .chart-bars { height: 60px; }
+    .bar-wrap span { font-size: 0.52rem; }
+    .dash-ai { padding: 0.65rem; gap: 0.5rem; }
+    .dash-ai-text { font-size: 0.7rem; }
   }
 </style>
 </head>
@@ -229,6 +318,7 @@
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
+  <div class="hero-inner">
   <div class="hero-content">
     <div class="hero-badge"><span class="badge-dot"></span><span data-i18n="hero.badge">Desarrollo · Consultoría · IA · SaaS</span></div>
     <h1 data-i18n-html="hero.h1">Tecnología que<br><em>ordena</em> y hace<br>crecer tu negocio.</h1>
@@ -247,6 +337,70 @@
       <div><div class="stat-num">100%</div><div class="stat-label" data-i18n="stat.3.label">Remoto & ágil</div></div>
     </div>
   </div>
+
+  <!-- DASHBOARD VISUAL -->
+  <div class="hero-visual">
+
+    <!-- Floating: nueva venta -->
+    <div class="float-card fc-sale">
+      <div class="fc-label" data-i18n="fc.sale.label">Nueva venta</div>
+      <div class="fc-row">
+        <div class="fc-dot" style="background:#25D366"></div>
+        <div class="fc-value">$47.500</div>
+      </div>
+      <div class="fc-sub" data-i18n="fc.sale.time">hace 2 min · Tienda online</div>
+    </div>
+
+    <!-- Floating: IA acción -->
+    <div class="float-card fc-ai">
+      <div class="fc-row" style="margin-bottom:0.25rem;">
+        <span style="color:var(--lime);font-size:0.8rem;">✦</span>
+        <span class="fc-label" style="margin-bottom:0;" data-i18n="fc.ai.label">IA activó campaña</span>
+      </div>
+      <div class="fc-value" style="font-size:0.8rem;" data-i18n="fc.ai.value">+$48.000 proyectados</div>
+      <div class="fc-sub" data-i18n="fc.ai.time">automático · jueves</div>
+    </div>
+
+    <div class="dash">
+      <div class="dash-header">
+        <div>
+          <div class="dash-title" data-i18n="dash.title">Panel de Ventas</div>
+          <div class="dash-subtitle" data-i18n="dash.subtitle">con IA · Tiempo real</div>
+        </div>
+        <div class="dash-live"><div class="live-dot"></div><span data-i18n="dash.live">En vivo</span></div>
+      </div>
+      <div class="dash-kpis">
+        <div class="kpi">
+          <div class="kpi-label" data-i18n="kpi.1.label">Ventas hoy</div>
+          <div class="kpi-val">$284.500</div>
+          <div class="kpi-delta up">+18% ↑</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label" data-i18n="kpi.2.label">Conversión</div>
+          <div class="kpi-val">34.2%</div>
+          <div class="kpi-delta up">+5.1% ↑</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label" data-i18n="kpi.3.label">Ticket prom.</div>
+          <div class="kpi-val">$12.300</div>
+          <div class="kpi-delta down">-2% ↓</div>
+        </div>
+      </div>
+      <div class="dash-chart">
+        <div class="chart-label" data-i18n="chart.label">Ventas últimos 7 días</div>
+        <div class="chart-bars" id="chart-bars"></div>
+      </div>
+      <div class="dash-ai">
+        <div class="dash-ai-icon">✦</div>
+        <div>
+          <div class="dash-ai-title" data-i18n="ai.insight.title">Insight de IA</div>
+          <div class="dash-ai-text" data-i18n="ai.insight.text">Los jueves convertís 2.4x más. Activar campaña automática puede sumar $48.000 esta semana.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div><!-- /hero-inner -->
 </section>
 
 <!-- SERVICIOS -->
@@ -478,6 +632,14 @@
       'mail.subject': 'Consulta desde sistemik.com.ar',
       'mail.address': 'consultas@sistemik.com.ar',
       'geo.text': 'Potenciá las ventas y la comunicación de tu negocio en {city}.',
+      'dash.title': 'Panel de Ventas', 'dash.subtitle': 'con IA · Tiempo real', 'dash.live': 'En vivo',
+      'kpi.1.label': 'Ventas hoy', 'kpi.2.label': 'Conversión', 'kpi.3.label': 'Ticket prom.',
+      'chart.label': 'Ventas últimos 7 días',
+      'chart.days': ['Lu','Ma','Mi','Ju','Vi','Sa','Hoy'],
+      'ai.insight.title': 'Insight de IA',
+      'ai.insight.text': 'Los jueves convertís 2.4x más. Activar campaña automática puede sumar $48.000 esta semana.',
+      'fc.sale.label': 'Nueva venta', 'fc.sale.time': 'hace 2 min · Tienda online',
+      'fc.ai.label': 'IA activó campaña', 'fc.ai.value': '+$48.000 proyectados', 'fc.ai.time': 'automático · jueves',
       'cal.days': ['Do','Lu','Ma','Mi','Ju','Vi','Sa'],
       'cal.months': ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
     },
@@ -510,6 +672,14 @@
       'mail.subject': 'Inquiry from sistemik.com.ar',
       'mail.address': 'contact@sistemik.com.ar',
       'geo.text': 'Boost your business sales and communication in {city}.',
+      'dash.title': 'Sales Dashboard', 'dash.subtitle': 'AI-powered · Real time', 'dash.live': 'Live',
+      'kpi.1.label': 'Sales today', 'kpi.2.label': 'Conversion', 'kpi.3.label': 'Avg. ticket',
+      'chart.label': 'Sales last 7 days',
+      'chart.days': ['Mon','Tue','Wed','Thu','Fri','Sat','Now'],
+      'ai.insight.title': 'AI Insight',
+      'ai.insight.text': 'Thursdays convert 2.4x more. Enabling auto campaign could add $48,000 this week.',
+      'fc.sale.label': 'New sale', 'fc.sale.time': '2 min ago · Online store',
+      'fc.ai.label': 'AI triggered campaign', 'fc.ai.value': '+$48,000 projected', 'fc.ai.time': 'automatic · thursday',
       'cal.days': ['Su','Mo','Tu','We','Th','Fr','Sa'],
       'cal.months': ['January','February','March','April','May','June','July','August','September','October','November','December'],
     }
@@ -544,6 +714,7 @@
     emailEl.textContent = emailAddr;
 
     renderDaysHeader();
+    renderChart();
     render();
 
     if (selectedDay) {
@@ -554,6 +725,20 @@
 
   function toggleLang() {
     applyLang(lang === 'es' ? 'en' : 'es');
+  }
+
+  const CHART_HEIGHTS = [45, 62, 58, 85, 63, 40, 91];
+
+  function renderChart() {
+    const container = document.getElementById('chart-bars');
+    if (!container) return;
+    const days = T[lang]['chart.days'];
+    container.innerHTML = CHART_HEIGHTS.map((h, i) =>
+      `<div class="bar-wrap">
+        <div class="bar${i === 6 ? ' active' : ''}" style="--h:${h}%"></div>
+        <span>${days[i]}</span>
+      </div>`
+    ).join('');
   }
 
   function renderDaysHeader() {
@@ -631,7 +816,7 @@
   function updateGeoText() {
     const el = document.getElementById('geo-text');
     if (!userCity || !el) return;
-    el.querySelector('span').textContent = T[lang]['geo.text'].replace('{city}', userCity);
+    el.querySelector('span').innerHTML = T[lang]['geo.text'].replace('{city}', `<span style="white-space:nowrap">${userCity}</span>`);
     el.style.display = 'flex';
   }
 
