@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sistemik · Consultora de Sistemas</title>
 <meta name="description" content="Sistemik es la consultora de sistemas para pymes. Desarrollo web, consultoría digital, productos SaaS e inteligencia artificial para que tu negocio venda más y escale.">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='8' fill='%230A0E1A'/><line x1='4' y1='18' x2='32' y2='18' stroke='%231A6BFF' stroke-width='1.5' opacity='.5'/><line x1='10' y1='6' x2='26' y2='30' stroke='%23C8F135' stroke-width='2'/><circle cx='10' cy='6' r='3' fill='%231A6BFF'/><circle cx='26' cy='6' r='3' fill='%231A6BFF'/><circle cx='4' cy='18' r='3' fill='%231A6BFF'/><circle cx='26' cy='30' r='3' fill='%231A6BFF'/><circle cx='10' cy='30' r='3' fill='%231A6BFF'/><circle cx='32' cy='18' r='4' fill='%23C8F135'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -15,7 +16,7 @@
     --muted: #6B7280; --white: #F8FAFF; --border: rgba(255,255,255,0.08);
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--ink); color: var(--white); line-height: 1.6; overflow-x: hidden; }
+  body { font-family: 'Inter', sans-serif; background: var(--ink); color: var(--white); line-height: 1.6; overflow-x: hidden; }
 
   /* NAV */
   nav {
@@ -24,7 +25,7 @@
     background: rgba(10,14,26,0.9); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border);
   }
   .logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .logo-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem; letter-spacing: -0.04em; color: var(--white); }
+  .logo-name { font-family: 'Geist', sans-serif; font-weight: 800; font-size: 1.2rem; letter-spacing: -0.04em; color: var(--white); }
   .logo-name span { color: var(--blue); }
   .nav-links { display: flex; gap: 1.75rem; list-style: none; }
   .nav-links a { color: rgba(248,250,255,0.5); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
@@ -35,7 +36,7 @@
   /* GENERAL */
   section { padding: 6rem 2.5rem; }
   .section-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: #6B9FFF; margin-bottom: 0.75rem; }
-  h2 { font-family: 'Syne', sans-serif; font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
+  h2 { font-family: 'Geist', sans-serif; font-size: clamp(2.2rem, 4.5vw, 3.2rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; margin-bottom: 1rem; }
   .section-intro { font-size: 1rem; color: rgba(248,250,255,0.55); max-width: 500px; line-height: 1.8; }
   .inner { max-width: 1100px; margin: 0 auto; }
 
@@ -54,13 +55,15 @@
   .hero-content { position: relative; max-width: 780px; }
   .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--blue-dim); border: 1px solid var(--blue-border); color: #6B9FFF; font-size: 0.78rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 1.5rem; letter-spacing: 0.06em; text-transform: uppercase; }
   .badge-dot { width: 6px; height: 6px; background: var(--lime); border-radius: 50%; display: inline-block; }
-  h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.8rem, 6vw, 5rem); line-height: 1.0; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+  h1 { font-family: 'Geist', sans-serif; font-weight: 800; font-size: clamp(3.2rem, 7.5vw, 6rem); line-height: 0.95; letter-spacing: -0.04em; margin-bottom: 1.75rem; }
   h1 em { font-style: normal; color: var(--lime); }
-  .hero-sub { font-size: 1.1rem; color: rgba(248,250,255,0.6); max-width: 500px; line-height: 1.8; margin-bottom: 2.5rem; }
+  .hero-sub { font-size: 1.1rem; color: rgba(248,250,255,0.6); max-width: 500px; line-height: 1.8; margin-bottom: 2.5rem; font-weight: 400; }
   .hero-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
-  .hero-stats { margin-top: 4rem; display: flex; gap: 3rem; flex-wrap: wrap; }
-  .stat-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--lime); line-height: 1; }
-  .stat-label { font-size: 0.78rem; color: var(--muted); margin-top: 0.25rem; }
+  .hero-stats { margin-top: 3.5rem; padding-top: 3rem; border-top: 1px solid var(--border); display: flex; gap: 0; flex-wrap: wrap; }
+  .hero-stats > div { padding: 0 2.5rem; border-left: 1px solid var(--border); }
+  .hero-stats > div:first-child { padding-left: 0; border-left: none; }
+  .stat-num { font-family: 'Geist', sans-serif; font-size: clamp(2.6rem, 5vw, 3.8rem); font-weight: 800; color: var(--lime); line-height: 1; letter-spacing: -0.03em; }
+  .stat-label { font-size: 0.82rem; color: rgba(248,250,255,0.5); margin-top: 0.4rem; font-weight: 500; letter-spacing: 0.01em; }
 
   /* SERVICIOS */
   #services { border-top: 1px solid var(--border); }
@@ -73,7 +76,7 @@
   .service-card.ai-card:hover { border-color: rgba(200,241,53,0.3); }
   .service-icon { width: 44px; height: 44px; background: var(--blue-dim); border-radius: 11px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
   .service-icon.lime { background: rgba(200,241,53,0.1); }
-  .service-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; }
+  .service-card h3 { font-family: 'Geist', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; }
   .service-card p { font-size: 0.82rem; color: rgba(248,250,255,0.5); line-height: 1.75; }
   .ai-badge { display: inline-block; background: rgba(200,241,53,0.12); border: 1px solid rgba(200,241,53,0.25); color: var(--lime); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 100px; margin-bottom: 0.75rem; }
 
@@ -99,7 +102,7 @@
   .work-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem; }
   .work-tag { font-size: 0.72rem; font-weight: 600; padding: 0.2rem 0.65rem; border-radius: 100px; background: var(--blue-dim); border: 1px solid var(--blue-border); color: #6B9FFF; }
   .work-tag.green { background: rgba(200,241,53,0.08); border-color: rgba(200,241,53,0.2); color: var(--lime); }
-  .work-card h3 { font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .work-card h3 { font-family: 'Geist', sans-serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
   .work-card p { font-size: 0.83rem; color: rgba(248,250,255,0.5); line-height: 1.7; margin-bottom: 1.1rem; }
   .work-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; font-weight: 600; color: #6B9FFF; text-decoration: none; transition: color 0.2s; }
   .work-link:hover { color: var(--white); }
@@ -109,7 +112,7 @@
   .calendar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
   .cal-wrap { background: var(--ink-2); border: 1px solid var(--border); border-radius: 20px; padding: 1.75rem; }
   .cal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
-  .cal-header h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; }
+  .cal-header h3 { font-family: 'Geist', sans-serif; font-size: 1rem; font-weight: 700; }
   .cal-nav { display: flex; gap: 0.5rem; }
   .cal-btn { background: var(--ink-3); border: 1px solid var(--border); color: var(--white); width: 30px; height: 30px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; transition: background 0.2s; display: flex; align-items: center; justify-content: center; }
   .cal-btn:hover { background: var(--blue-dim); border-color: var(--blue-border); }
@@ -127,7 +130,7 @@
   .cal-legend { display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
   .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.74rem; color: var(--muted); }
   .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
-  .cal-info h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 800; margin-bottom: 0.75rem; }
+  .cal-info h3 { font-family: 'Geist', sans-serif; font-size: 1.4rem; font-weight: 800; margin-bottom: 0.75rem; }
   .cal-info p { font-size: 0.9rem; color: rgba(248,250,255,0.55); line-height: 1.8; margin-bottom: 2rem; }
   .contact-options { display: flex; flex-direction: column; gap: 0.75rem; }
   .contact-btn { display: flex; align-items: center; gap: 0.85rem; padding: 1rem 1.25rem; border-radius: 14px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: transform 0.2s, opacity 0.2s; border: 1px solid transparent; }
@@ -138,7 +141,9 @@
   .contact-btn.wa .contact-btn-icon { background: rgba(37,211,102,0.15); }
   .contact-btn.ig .contact-btn-icon { background: rgba(225,48,108,0.12); }
   .contact-btn-label { font-size: 0.75rem; opacity: 0.65; font-weight: 400; display: block; }
-  #selected-date-msg { font-size: 0.8rem; color: var(--lime); margin-top: 0.75rem; min-height: 20px; text-align: center; }
+  #cal-wa-link { display: none; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1rem; padding: 0.75rem 1.25rem; border-radius: 12px; background: rgba(37,211,102,0.08); border: 1px solid rgba(37,211,102,0.2); color: #25D366; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+  #cal-wa-link:hover { background: rgba(37,211,102,0.15); transform: translateY(-1px); }
+  #cal-wa-link.visible { display: flex; }
 
   /* FOOTER */
   footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
@@ -158,6 +163,8 @@
     .nav-links { display: none; }
     .hero { padding: 7rem 1.25rem 3rem; }
     section { padding: 4rem 1.25rem; }
+    h1 { font-size: clamp(2rem, 10vw, 3rem); line-height: 1.08; letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
     .services-grid { grid-template-columns: 1fr 1fr; }
     .work-grid { grid-template-columns: 1fr; }
     .calendar-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -165,7 +172,9 @@
   }
   @media (max-width: 480px) {
     .services-grid { grid-template-columns: 1fr; }
-    .hero-stats { gap: 1.5rem; }
+    .hero-stats { gap: 0; }
+    .hero-stats > div { padding: 1.25rem 1.5rem; border-left: none; border-top: 1px solid var(--border); width: 50%; }
+    .hero-stats > div:first-child { border-top: none; padding-left: 0; }
   }
 </style>
 </head>
@@ -383,7 +392,10 @@
           <div class="legend-item"><div class="legend-dot" style="background:rgba(255,80,60,0.5)"></div>Ocupado</div>
           <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div>Hoy</div>
         </div>
-        <div id="selected-date-msg"></div>
+        <a id="cal-wa-link" href="#" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.855L.057 23.716a.5.5 0 00.609.61l5.919-1.463A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.002-1.368l-.36-.214-3.713.918.952-3.629-.235-.373A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+          Hablemos →
+        </a>
       </div>
     </div>
   </div>
@@ -404,7 +416,7 @@
     </svg>
     <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;letter-spacing:-0.03em;">sistemik</span>
   </div>
-  <p>© 2025 · Bariloche, Argentina · hola@sistemik.com.ar</p>
+  <p>© 2025 · Bariloche, Argentina · consultas@sistemik.com.ar</p>
 </footer>
 
 <script>
@@ -426,7 +438,7 @@
   function changeMonth(dir) {
     current = new Date(current.getFullYear(), current.getMonth() + dir, 1);
     selectedDay = null;
-    document.getElementById('selected-date-msg').textContent = '';
+    document.getElementById('cal-wa-link').classList.remove('visible');
     render();
   }
 
@@ -477,8 +489,11 @@
     const month = current.getMonth();
     const dateStr = `${d} de ${MONTHS_ES[month]} de ${year}`;
     const msg = encodeURIComponent(`Hola! Me interesa agendar una consulta con Sistemik para el ${dateStr}.`);
-    document.getElementById('wa-btn').href = `https://wa.me/${WA_NUMBER}?text=${msg}`;
-    document.getElementById('selected-date-msg').textContent = `✓ Seleccionaste el ${dateStr} — ahora hacé click en WhatsApp`;
+    const waUrl = `https://wa.me/${WA_NUMBER}?text=${msg}`;
+    document.getElementById('wa-btn').href = waUrl;
+    const calLink = document.getElementById('cal-wa-link');
+    calLink.href = waUrl;
+    calLink.classList.add('visible');
   }
 
   render();
