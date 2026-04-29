@@ -215,6 +215,10 @@
     <div class="hero-badge"><span class="badge-dot"></span><span data-i18n="hero.badge">Desarrollo · Consultoría · IA · SaaS</span></div>
     <h1 data-i18n-html="hero.h1">Tecnología que<br><em>ordena</em> y hace<br>crecer tu negocio.</h1>
     <p class="hero-sub" data-i18n="hero.sub">Sistemik es la consultora de sistemas para pymes. Diseño, desarrollo e inteligencia artificial para que tu negocio venda más, trabaje menos y escale de verdad.</p>
+    <div id="geo-text" style="display:none; align-items:center; gap:0.5rem; margin-bottom:2rem; margin-top:-1rem; background:rgba(200,241,53,0.08); border:1px solid rgba(200,241,53,0.25); border-radius:100px; padding:0.45rem 1rem; width:fit-content;">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C8F135" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <span style="font-size:0.82rem; color:var(--lime); font-weight:600; letter-spacing:0.01em;"></span>
+    </div>
     <div class="hero-actions">
       <a href="#calendar" class="btn-lime" data-i18n="hero.cta">Agendá una consulta ↗</a>
       <a href="#work" class="btn-ghost" data-i18n="hero.secondary">Ver trabajos</a>
@@ -455,6 +459,7 @@
       'wa.msg.nodate': 'Hola! Me interesa agendar una consulta con Sistemik.',
       'mail.subject': 'Consulta desde sistemik.com.ar',
       'mail.address': 'consultas@sistemik.com.ar',
+      'geo.text': 'Potenciá las ventas y la comunicación de tu negocio en {city}.',
       'cal.days': ['Do','Lu','Ma','Mi','Ju','Vi','Sa'],
       'cal.months': ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
     },
@@ -486,6 +491,7 @@
       'wa.msg.nodate': "Hi! I'm interested in scheduling a consultation with Sistemik.",
       'mail.subject': 'Inquiry from sistemik.com.ar',
       'mail.address': 'contact@sistemik.com.ar',
+      'geo.text': 'Boost your business sales and communication in {city}.',
       'cal.days': ['Su','Mo','Tu','We','Th','Fr','Sa'],
       'cal.months': ['January','February','March','April','May','June','July','August','September','October','November','December'],
     }
@@ -494,6 +500,7 @@
   let lang = localStorage.getItem('sk-lang') || (navigator.language.toLowerCase().startsWith('es') ? 'es' : 'en');
   let current = new Date();
   let selectedDay = null;
+  let userCity = null;
 
   function applyLang(l) {
     lang = l;
@@ -512,6 +519,7 @@
     document.getElementById('lang-toggle').textContent = l === 'es' ? 'EN' : 'ES';
 
     document.getElementById('wa-btn').href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(T[l]['wa.msg.nodate'])}`;
+    updateGeoText();
     const emailEl = document.getElementById('footer-email');
     const emailAddr = T[l]['mail.address'];
     emailEl.href = `mailto:${emailAddr}?subject=${encodeURIComponent(T[l]['mail.subject'])}`;
@@ -601,6 +609,18 @@
     updateWaLink(d);
     document.getElementById('cal-wa-link').classList.add('visible');
   }
+
+  function updateGeoText() {
+    const el = document.getElementById('geo-text');
+    if (!userCity || !el) return;
+    el.querySelector('span').textContent = T[lang]['geo.text'].replace('{city}', userCity);
+    el.style.display = 'flex';
+  }
+
+  fetch('https://ipinfo.io/json')
+    .then(r => r.json())
+    .then(data => { if (data.city) { userCity = data.city; updateGeoText(); } })
+    .catch(() => {});
 
   applyLang(lang);
 </script>
