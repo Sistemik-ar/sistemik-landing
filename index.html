@@ -138,6 +138,8 @@
   .work-card:hover .work-preview img { transform: scale(1.03); }
   .work-preview-paola { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
   .work-preview-poli { background: linear-gradient(135deg, #0d1117 0%, #1a1a2e 50%, #0a2a4a 100%); }
+  .work-preview-bandurrias { background: linear-gradient(135deg, #0b0f0a 0%, #14201a 50%, #1e2a12 100%); }
+  .work-preview-repuestos { background: linear-gradient(135deg, #0e0b1a 0%, #1a1530 50%, #2a1f4a 100%); }
   .work-info { padding: 1.5rem; }
   .work-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem; }
   .work-tag { font-size: 0.72rem; font-weight: 600; padding: 0.2rem 0.65rem; border-radius: 100px; background: var(--blue-dim); border: 1px solid var(--blue-border); color: #6B9FFF; }
@@ -300,7 +302,7 @@
       <a href="#calendar" class="btn-lime" data-i18n="hero.cta">Agendá una consulta →</a>
       <a href="#work" class="btn-ghost" data-i18n="hero.secondary">Ver trabajos</a>
     </div>
-    <p class="hero-proof" data-i18n="hero.proof">Plataformas en producción para salud, automotor y e-commerce.</p>
+    <p class="hero-proof" data-i18n="hero.proof">Plataformas en producción para salud, automotor, deporte y e-commerce.</p>
   </div>
 
   <!-- DASHBOARD VISUAL -->
@@ -427,6 +429,40 @@
         </div>
       </div>
 
+      <div class="work-card">
+        <div class="work-preview work-preview-bandurrias">
+          <img src="work-bandurrias.jpg" alt="bandurriastrailrunning.com.ar" loading="lazy" width="1200" height="750">
+        </div>
+        <div class="work-info">
+          <div class="work-tags">
+            <span class="work-tag" data-i18n="tag.pwa">App PWA</span>
+            <span class="work-tag" data-i18n="tag.sessions">Turnos y cuotas</span>
+            <span class="work-tag">Strava</span>
+            <span class="work-tag green" data-i18n="tag.wabot">Bot WhatsApp</span>
+          </div>
+          <h3>Bandurrias Trail Running</h3>
+          <p data-i18n="work.bandurrias.desc">Sitio público y app para el equipo de trail running. Planificación semanal, inscripción a entrenamientos, cobro de cuota, roles para entrenadores y miembros, integración con Strava y avisos por WhatsApp.</p>
+          <a href="https://bandurriastrailrunning.com.ar" target="_blank" class="work-link" data-i18n="work.visit">Ver sitio ↗</a>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-preview work-preview-repuestos">
+          <img src="work-repuestos.jpg" alt="repuestosaltoque.com.ar" loading="lazy" width="1200" height="750">
+        </div>
+        <div class="work-info">
+          <div class="work-tags">
+            <span class="work-tag green" data-i18n="tag.own">Producto propio</span>
+            <span class="work-tag">Marketplace</span>
+            <span class="work-tag" data-i18n="tag.livequotes">Cotizaciones en vivo</span>
+            <span class="work-tag">MercadoPago</span>
+          </div>
+          <h3>RepuestosAlToque</h3>
+          <p data-i18n="work.repuestos.desc">Marketplace de repuestos urgentes para Bariloche. El mecánico pide, las casas de repuestos cotizan en vivo, el pago se divide automáticamente y un backoffice administra usuarios, fletes y reputación.</p>
+          <a href="https://repuestosaltoque.com.ar" target="_blank" class="work-link" data-i18n="work.visit">Ver sitio ↗</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -541,7 +577,7 @@
       'hero.h1': 'Tecnología que<br><em>ordena</em> y hace<br>crecer tu negocio.',
       'hero.sub': 'Sistemik es la consultora de sistemas para pymes. Diseño, desarrollo e inteligencia artificial para que tu negocio venda más, trabaje menos y escale de verdad.',
       'hero.cta': 'Agendá una consulta →', 'hero.secondary': 'Ver trabajos',
-      'hero.proof': 'Plataformas en producción para salud, automotor y e-commerce.',
+      'hero.proof': 'Plataformas en producción para salud, automotor, deporte y e-commerce.',
       'services.label': 'Qué hacemos', 'services.h2': 'Servicios que mueven el negocio.',
       'service.web.title': 'Desarrollo Web & Apps', 'service.web.desc': 'Sitios y plataformas a medida con frontend público, backoffice y todo lo que tu operación necesite.',
       'service.consulting.title': 'Consultoría Digital', 'service.consulting.desc': 'Analizamos tu negocio y trazamos una hoja de ruta digital clara, ejecutable y con resultados medibles.',
@@ -553,6 +589,9 @@
       'work.poli.desc': 'Plataforma de venta de autos con frontend público y panel de administración. Los vendedores gestionan el stock desde el backoffice y los clientes filtran por marca, modelo y condición del vehículo.',
       'work.visit': 'Ver sitio ↗',
       'tag.appointments': 'Turnos online', 'tag.catalog': 'Catálogo', 'tag.filters': 'Filtros avanzados',
+      'tag.pwa': 'App PWA', 'tag.sessions': 'Turnos y cuotas', 'tag.wabot': 'Bot WhatsApp', 'tag.own': 'Producto propio', 'tag.livequotes': 'Cotizaciones en vivo',
+      'work.bandurrias.desc': 'Sitio público y app para el equipo de trail running. Planificación semanal, inscripción a entrenamientos, cobro de cuota, roles para entrenadores y miembros, integración con Strava y avisos por WhatsApp.',
+      'work.repuestos.desc': 'Marketplace de repuestos urgentes para Bariloche. El mecánico pide, las casas de repuestos cotizan en vivo, el pago se divide automáticamente y un backoffice administra usuarios, fletes y reputación.',
       'process.label': 'Cómo trabajamos', 'process.h2': 'Tres pasos, sin sorpresas.',
       'process.intro': 'Sabés qué esperar en cada etapa antes de empezar.',
       'process.1.title': 'Charla inicial', 'process.1.desc': 'Nos contás cómo funciona tu negocio hoy y qué te está frenando. Sin costo y sin compromiso.',
@@ -581,7 +620,7 @@
       'hero.h1': 'Technology that brings <em>order</em> to your business and helps it grow.',
       'hero.sub': 'Sistemik is the tech partner for small businesses. Design, development and AI so your business sells more, works less and truly scales.',
       'hero.cta': 'Book a consultation →', 'hero.secondary': 'See our work',
-      'hero.proof': 'Platforms in production for healthcare, automotive and e-commerce.',
+      'hero.proof': 'Platforms in production for healthcare, automotive, sports and e-commerce.',
       'services.label': 'What we do', 'services.h2': 'Services that move the needle.',
       'service.web.title': 'Web Development & Apps', 'service.web.desc': 'Custom sites and platforms with public frontend, backoffice and everything your operation needs.',
       'service.consulting.title': 'Digital Consulting', 'service.consulting.desc': 'We analyze your business and chart a clear, actionable digital roadmap with measurable results.',
@@ -593,6 +632,9 @@
       'work.poli.desc': 'Car sales platform with public frontend and admin panel. Sellers manage inventory from the backoffice while customers filter by brand, model and vehicle condition.',
       'work.visit': 'Visit site ↗',
       'tag.appointments': 'Online appointments', 'tag.catalog': 'Catalog', 'tag.filters': 'Advanced filters',
+      'tag.pwa': 'PWA app', 'tag.sessions': 'Sessions & dues', 'tag.wabot': 'WhatsApp bot', 'tag.own': 'Own product', 'tag.livequotes': 'Live quotes',
+      'work.bandurrias.desc': 'Public site and app for the trail running team. Weekly planning, session sign-ups, membership payments, coach and member roles, Strava integration and WhatsApp reminders.',
+      'work.repuestos.desc': 'Urgent auto-parts marketplace for Bariloche. Mechanics post a request, parts shops quote live, payments are split automatically and a backoffice manages users, freight and reputation.',
       'process.label': 'How we work', 'process.h2': 'Three steps, no surprises.',
       'process.intro': 'You know what to expect at every stage before we start.',
       'process.1.title': 'Intro call', 'process.1.desc': 'You tell us how your business runs today and what is holding it back. Free, no commitment.',
