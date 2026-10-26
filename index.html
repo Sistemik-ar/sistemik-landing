@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sistemik · Consultora de Sistemas</title>
-<meta name="description" content="Sistemik es la consultora de sistemas para pymes. Desarrollo web, consultoría digital, productos SaaS e inteligencia artificial para que tu negocio venda más y escale.">
+<title>Sistemik · Software y bots de WhatsApp para pymes de Bariloche</title>
+<meta name="description" content="Sistemik diseña y construye apps, bots de WhatsApp y herramientas internas para pymes y profesionales. Sin costo inicial, por un abono mensual, en producción en semanas. Bariloche, Argentina.">
 <meta name="theme-color" content="#0A0E1A">
+<link rel="canonical" href="https://sistemik.com.ar/">
 
 <!-- Open Graph / WhatsApp / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sistemik.com.ar/">
 <meta property="og:site_name" content="Sistemik">
-<meta property="og:title" content="Sistemik · Tecnología que ordena y hace crecer tu negocio">
-<meta property="og:description" content="Consultora de sistemas para pymes. Desarrollo web, consultoría digital, SaaS e IA para que tu negocio venda más y escale de verdad.">
+<meta property="og:title" content="Sistemik · Sistemas que trabajan solos para tu negocio">
+<meta property="og:description" content="Apps, bots de WhatsApp y herramientas internas para pymes y profesionales. Sin costo inicial, por un abono mensual, en producción en semanas.">
 <meta property="og:image" content="https://sistemik.com.ar/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -20,273 +21,411 @@
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sistemik · Tecnología que ordena y hace crecer tu negocio">
-<meta name="twitter:description" content="Consultora de sistemas para pymes. Desarrollo web, consultoría digital, SaaS e IA para que tu negocio venda más y escale de verdad.">
+<meta name="twitter:title" content="Sistemik · Sistemas que trabajan solos para tu negocio">
+<meta name="twitter:description" content="Apps, bots de WhatsApp y herramientas internas para pymes y profesionales. Sin costo inicial, por un abono mensual.">
 <meta name="twitter:image" content="https://sistemik.com.ar/og.png">
+
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='8' fill='%230A0E1A'/><line x1='4' y1='18' x2='32' y2='18' stroke='%231A6BFF' stroke-width='1.5' opacity='.5'/><line x1='10' y1='6' x2='26' y2='30' stroke='%23C8F135' stroke-width='2'/><circle cx='10' cy='6' r='3' fill='%231A6BFF'/><circle cx='26' cy='6' r='3' fill='%231A6BFF'/><circle cx='4' cy='18' r='3' fill='%231A6BFF'/><circle cx='26' cy='30' r='3' fill='%231A6BFF'/><circle cx='10' cy='30' r='3' fill='%231A6BFF'/><circle cx='32' cy='18' r='4' fill='%23C8F135'/></svg>">
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Sistemik",
+  "url": "https://sistemik.com.ar/",
+  "email": "consultas@sistemik.com.ar",
+  "description": "Consultora de sistemas para pymes y profesionales: apps a medida, bots de WhatsApp, productos por abono mensual e IA aplicada.",
+  "address": { "@type": "PostalAddress", "addressLocality": "San Carlos de Bariloche", "addressRegion": "Río Negro", "addressCountry": "AR" },
+  "areaServed": "AR",
+  "sameAs": ["https://instagram.com/sistemik.ar"]
+}
+</script>
+
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --lime: #C8F135; --lime-dark: #9DC219;
-    --blue: #1A6BFF; --blue-dim: rgba(26,107,255,0.12); --blue-border: rgba(26,107,255,0.3);
-    --ink: #0A0E1A; --ink-2: #111520; --ink-3: #181D2E;
-    --muted: #6B7280; --white: #F8FAFF; --border: rgba(255,255,255,0.08);
+    --lime: #C8F135; --lime-ink: #0A0E1A;
+    --blue: #1A6BFF; --blue-soft: #7FAAFF; --blue-dim: rgba(26,107,255,0.12); --blue-border: rgba(26,107,255,0.32);
+    --ink: #0A0E1A; --ink-2: #10141F; --ink-3: #161B29; --ink-4: #1E2436;
+    --text: #F3F6FF; --text-2: rgba(243,246,255,0.72); --text-3: rgba(243,246,255,0.48);
+    --border: rgba(255,255,255,0.08); --border-2: rgba(255,255,255,0.14);
+    --wa: #25D366; --ig: #E1306C;
+    --gutter: clamp(1rem, 4vw, 2.5rem);
+    --radius: 20px; --radius-sm: 12px;
+    --font-display: 'Geist', 'Inter', system-ui, sans-serif;
+    --font-text: 'Inter', system-ui, sans-serif;
   }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; background: var(--ink); color: var(--white); line-height: 1.6; overflow-x: hidden; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { font-family: var(--font-text); background: var(--ink); color: var(--text); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  ::selection { background: var(--lime); color: var(--lime-ink); }
+  :focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; border-radius: 4px; }
 
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 1.1rem 2.5rem; display: flex; align-items: center; justify-content: space-between;
-    background: rgba(10,14,26,0.9); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border);
-  }
-  .logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .logo-name { font-family: 'Geist', sans-serif; font-weight: 800; font-size: 1.2rem; letter-spacing: -0.04em; color: var(--white); }
-  .logo-name span { color: var(--blue); }
-  .nav-links { display: flex; gap: 1.75rem; list-style: none; }
-  .nav-links a { color: rgba(248,250,255,0.5); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--white); }
-  .nav-right { display: flex; align-items: center; gap: 0.75rem; }
-  .lang-btn { background: none; border: 1px solid var(--border); color: rgba(248,250,255,0.45); font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.7rem; border-radius: 100px; cursor: pointer; transition: color 0.2s, border-color 0.2s; letter-spacing: 0.06em; }
-  .lang-btn:hover { color: var(--white); border-color: rgba(255,255,255,0.3); }
-  .nav-cta { background: var(--blue); color: #fff; padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
-  .nav-cta:hover { opacity: 0.85; }
-
-  /* GENERAL */
-  section { padding: 6rem 2.5rem; }
-  .section-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: #6B9FFF; margin-bottom: 0.75rem; }
-  h2 { font-family: 'Geist', sans-serif; font-size: clamp(2.2rem, 4.5vw, 3.2rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; margin-bottom: 1rem; }
-  .section-intro { font-size: 1rem; color: rgba(248,250,255,0.55); max-width: 500px; line-height: 1.8; }
-  .inner { max-width: 1100px; margin: 0 auto; }
+  .inner { max-width: 1140px; margin: 0 auto; padding: 0 var(--gutter); }
+  section { padding: clamp(4.5rem, 9vw, 7.5rem) 0; position: relative; }
+  .section-label { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--blue-soft); margin-bottom: 1rem; }
+  .section-label::before { content: ''; width: 18px; height: 2px; background: var(--blue); border-radius: 2px; }
+  h2 { font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 800; letter-spacing: -0.035em; line-height: 1.08; margin-bottom: 1rem; max-width: 22ch; }
+  h2 em { font-style: normal; color: var(--lime); }
+  .section-intro { font-size: clamp(1rem, 1.4vw, 1.1rem); color: var(--text-2); max-width: 56ch; line-height: 1.7; }
+  .section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; margin-bottom: clamp(2rem, 5vw, 3.5rem); }
 
   /* BUTTONS */
-  .btn-lime { background: var(--lime); color: #0A0E1A; padding: 0.85rem 2rem; border-radius: 100px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; }
-  .btn-lime:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(200,241,53,0.25); }
-  .btn-ghost { color: var(--white); padding: 0.85rem 2rem; border-radius: 100px; font-weight: 500; font-size: 0.95rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.18); transition: border-color 0.2s, background 0.2s; }
-  .btn-ghost:hover { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.05); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; padding: 0.9rem 1.6rem; border-radius: 100px; font-weight: 700; font-size: 0.95rem; text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s, background 0.2s, border-color 0.2s, color 0.2s; white-space: nowrap; line-height: 1.2; }
+  .btn svg { flex-shrink: 0; }
+  .btn-lime { background: var(--lime); color: var(--lime-ink); }
+  .btn-lime:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(200,241,53,0.28); }
+  .btn-wa { background: var(--wa); color: #06281A; }
+  .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37,211,102,0.3); }
+  .btn-ghost { color: var(--text); border-color: var(--border-2); background: rgba(255,255,255,0.02); font-weight: 600; }
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.06); }
+  .btn-blue { background: var(--blue); color: #fff; }
+  .btn-blue:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(26,107,255,0.35); }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; transition: background 0.25s, border-color 0.25s; border-bottom: 1px solid transparent; }
+  nav.scrolled, nav.open { background: rgba(10,14,26,0.86); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-color: var(--border); }
+  .nav-inner { max-width: 1140px; margin: 0 auto; padding: 0.95rem var(--gutter); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .logo-wrap { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-name { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; letter-spacing: -0.04em; color: var(--text); }
+  .logo-name span { color: var(--blue-soft); }
+  .nav-links { display: flex; gap: 1.6rem; list-style: none; }
+  .nav-links a { color: var(--text-3); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-right { display: flex; align-items: center; gap: 0.6rem; }
+  .lang-btn { background: none; border: 1px solid var(--border-2); color: var(--text-3); font-family: var(--font-text); font-size: 0.72rem; font-weight: 700; padding: 0.38rem 0.7rem; border-radius: 100px; cursor: pointer; transition: color 0.2s, border-color 0.2s; letter-spacing: 0.08em; }
+  .lang-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.4); }
+  .nav-cta { padding: 0.55rem 1.1rem; font-size: 0.85rem; }
+  .burger { display: none; width: 40px; height: 40px; border: 1px solid var(--border-2); background: none; border-radius: 10px; cursor: pointer; align-items: center; justify-content: center; flex-direction: column; gap: 5px; }
+  .burger span { width: 18px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+  nav.open .burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  nav.open .burger span:nth-child(2) { opacity: 0; }
+  nav.open .burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu { display: none; padding: 0.5rem var(--gutter) 1.25rem; border-top: 1px solid var(--border); }
+  nav.open .mobile-menu { display: block; }
+  .mobile-menu a { display: block; padding: 0.85rem 0; color: var(--text); text-decoration: none; font-weight: 600; font-size: 1.05rem; border-bottom: 1px solid var(--border); }
+  .mobile-menu .btn { margin-top: 1rem; width: 100%; }
 
   /* HERO */
-  .hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 2.5rem 4rem; position: relative; overflow: hidden; }
-  .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 55% 55% at 75% 25%, rgba(26,107,255,0.14) 0%, transparent 65%), radial-gradient(ellipse 40% 40% at 20% 75%, rgba(200,241,53,0.07) 0%, transparent 55%); pointer-events: none; }
-  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 56px 56px; pointer-events: none; }
-  .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; width: 100%; max-width: 1400px; }
-  .hero-content { position: relative; }
-
-  /* DASHBOARD MOCKUP */
-  .hero-visual { position: relative; padding: 1rem; }
-  .dash { background: var(--ink-2); border: 1px solid var(--border); border-radius: 20px; padding: 1.25rem; box-shadow: 0 40px 100px rgba(0,0,0,0.5), 0 0 60px rgba(26,107,255,0.06); transform: perspective(1000px) rotateY(-4deg) rotateX(2deg); }
-  .dash-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
-  .dash-title { font-family: 'Geist', sans-serif; font-weight: 700; font-size: 0.88rem; }
-  .dash-subtitle { font-size: 0.68rem; color: var(--muted); margin-top: 0.15rem; }
-  .dash-live { display: flex; align-items: center; gap: 0.35rem; font-size: 0.7rem; font-weight: 600; color: #25D366; }
-  .live-dot { width: 6px; height: 6px; background: #25D366; border-radius: 50%; animation: livePulse 2s infinite; flex-shrink: 0; }
-  @keyframes livePulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.8)} }
-  .dash-kpis { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.5rem; margin-bottom: 1rem; }
-  .kpi { background: var(--ink-3); border-radius: 10px; padding: 0.65rem 0.75rem; border: 1px solid var(--border); }
-  .kpi-label { font-size: 0.62rem; color: var(--muted); margin-bottom: 0.2rem; font-weight: 500; }
-  .kpi-val { font-family: 'Geist', sans-serif; font-size: 0.95rem; font-weight: 800; letter-spacing: -0.02em; }
-  .kpi-delta { font-size: 0.63rem; font-weight: 600; margin-top: 0.2rem; }
-  .kpi-delta.up { color: #25D366; }
-  .kpi-delta.down { color: #FF5040; }
-  .dash-chart { margin-bottom: 1rem; }
-  .chart-label { font-size: 0.65rem; color: var(--muted); margin-bottom: 0.6rem; font-weight: 500; }
-  .chart-bars { display: flex; align-items: flex-end; gap: 0.3rem; height: 80px; }
-  .bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.25rem; height: 100%; justify-content: flex-end; }
-  .bar { width: 100%; background: var(--blue-dim); border: 1px solid var(--blue-border); border-radius: 4px 4px 0 0; height: var(--h); animation: barFill 0.7s ease both; }
-  .bar.active { background: rgba(26,107,255,0.45); border-color: var(--blue); box-shadow: 0 0 12px rgba(26,107,255,0.3); }
-  .bar-wrap span { font-size: 0.58rem; color: var(--muted); }
-  @keyframes barFill { from { height: 0 } to { height: var(--h) } }
-  .bar-wrap:nth-child(1) .bar { animation-delay: 0.05s } .bar-wrap:nth-child(2) .bar { animation-delay: 0.1s }
-  .bar-wrap:nth-child(3) .bar { animation-delay: 0.15s } .bar-wrap:nth-child(4) .bar { animation-delay: 0.2s }
-  .bar-wrap:nth-child(5) .bar { animation-delay: 0.25s } .bar-wrap:nth-child(6) .bar { animation-delay: 0.3s }
-  .bar-wrap:nth-child(7) .bar { animation-delay: 0.35s }
-  .dash-ai { display: flex; gap: 0.65rem; background: rgba(200,241,53,0.06); border: 1px solid rgba(200,241,53,0.18); border-radius: 12px; padding: 0.85rem; }
-  .dash-ai-icon { font-size: 1rem; color: var(--lime); flex-shrink: 0; line-height: 1.4; }
-  .dash-ai-title { font-size: 0.63rem; font-weight: 700; color: var(--lime); letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 0.25rem; }
-  .dash-ai-text { font-size: 0.74rem; color: rgba(248,250,255,0.55); line-height: 1.55; }
-
-  h1 { font-family: 'Geist', sans-serif; font-weight: 800; font-size: clamp(3.2rem, 7.5vw, 5.4rem); line-height: 0.98; letter-spacing: -0.04em; margin-bottom: 1.75rem; }
+  .hero { min-height: 100svh; display: flex; align-items: center; padding: 7.5rem 0 4rem; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; pointer-events: none; background:
+    radial-gradient(ellipse 50% 45% at 78% 30%, rgba(26,107,255,0.18) 0%, transparent 65%),
+    radial-gradient(ellipse 35% 35% at 15% 80%, rgba(200,241,53,0.07) 0%, transparent 55%); }
+  .hero-grid { position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, #000 30%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, #000 30%, transparent 100%); }
+  .hero-inner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; max-width: 1140px; margin: 0 auto; padding: 0 var(--gutter); width: 100%; position: relative; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.78rem; font-weight: 600; color: var(--text-2); padding: 0.4rem 0.9rem 0.4rem 0.5rem; border: 1px solid var(--border-2); border-radius: 100px; margin-bottom: 1.6rem; background: rgba(255,255,255,0.03); }
+  .eyebrow i { width: 8px; height: 8px; border-radius: 50%; background: var(--wa); box-shadow: 0 0 0 4px rgba(37,211,102,0.18); margin-left: 0.3rem; }
+  h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1.0; letter-spacing: -0.04em; margin-bottom: 1.5rem; max-width: 14ch; }
   h1 em { font-style: normal; color: var(--lime); }
-  .hero-sub { font-size: 1.1rem; color: rgba(248,250,255,0.6); max-width: 500px; line-height: 1.8; margin-bottom: 2.5rem; font-weight: 400; }
-  .hero-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
-  .hero-proof { margin-top: 2.75rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.82rem; color: rgba(248,250,255,0.4); max-width: 500px; line-height: 1.6; animation: fadeUp 0.5s 0.4s ease both; }
+  .hero-sub { font-size: clamp(1.02rem, 1.5vw, 1.18rem); color: var(--text-2); max-width: 50ch; line-height: 1.7; margin-bottom: 2.2rem; }
+  .hero-sub strong { color: var(--text); font-weight: 600; }
+  .hero-actions { display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap; }
+  .hero-proof { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 0.75rem 1.25rem; flex-wrap: wrap; font-size: 0.82rem; color: var(--text-3); }
+  .hero-proof b { color: var(--text-2); font-weight: 600; }
+  .proof-chips { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+  .proof-chips span { padding: 0.25rem 0.65rem; border-radius: 100px; border: 1px solid var(--border); font-size: 0.75rem; font-weight: 500; color: var(--text-2); }
+
+  /* PHONE MOCKUP */
+  .hero-visual { display: flex; justify-content: center; align-items: center; position: relative; }
+  .phone-wrap { position: relative; width: 300px; animation: floatY 7s ease-in-out infinite; }
+  @keyframes floatY { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-8px) } }
+  .phone { width: 300px; height: 580px; border-radius: 42px; border: 8px solid #1C202C; background: #F4F6FB; overflow: hidden; position: relative; color: #0E1220; font-family: var(--font-text); box-shadow: 0 50px 100px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.08), 0 0 80px rgba(26,107,255,0.12); font-variant-numeric: tabular-nums; }
+  .ph-notch { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); width: 92px; height: 24px; background: #1C202C; border-radius: 14px; z-index: 2; }
+  .ph-top { padding: 46px 18px 10px; display: flex; justify-content: space-between; align-items: center; }
+  .ph-top h4 { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+  .ph-top small { display: block; font-size: 11px; color: #6A7383; margin-top: 3px; }
+  .ph-avatar { width: 30px; height: 30px; border-radius: 50%; background: #0E1220; color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 12px; }
+  .ph-body { padding: 0 14px; display: flex; flex-direction: column; gap: 10px; }
+  .ph-hero { background: #0E1220; color: #fff; border-radius: 14px; padding: 12px 14px; }
+  .ph-hero small { font-size: 11px; color: rgba(255,255,255,0.7); }
+  .ph-hero b { display: block; font-size: 26px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; margin: 3px 0 6px; }
+  .ph-hero .row { display: flex; justify-content: space-between; font-size: 11px; color: rgba(255,255,255,0.75); }
+  .ph-card { background: #fff; border-radius: 14px; padding: 11px 12px 4px; box-shadow: 0 1px 2px rgba(14,18,32,0.05); }
+  .ph-card h5 { font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #6A7383; margin-bottom: 4px; }
+  .ph-row { display: flex; align-items: center; gap: 9px; padding: 7px 0; border-top: 1px solid #E8EBF2; }
+  .ph-row:first-of-type { border-top: 0; }
+  .ph-date { width: 36px; flex: none; text-align: center; background: #F4F6FB; border-radius: 8px; padding: 4px 0; }
+  .ph-date b { display: block; font-size: 13px; line-height: 1; font-weight: 700; }
+  .ph-date small { display: block; font-size: 7.5px; text-transform: uppercase; color: #6A7383; font-weight: 700; margin-top: 2px; }
+  .ph-date.soon { background: #FFF3DB; } .ph-date.soon b, .ph-date.soon small { color: #C97E00; }
+  .ph-row .t { flex: 1; min-width: 0; }
+  .ph-row .t b { display: block; font-size: 12.5px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ph-row .t small { display: block; font-size: 10.5px; color: #6A7383; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ph-chip { flex: none; font-size: 9.5px; font-weight: 600; padding: 2px 7px; border-radius: 999px; background: #F4F6FB; color: #6A7383; }
+  .ph-chip.warn { background: #FFF3DB; color: #C97E00; }
+  .ph-chip.ok { background: #E3F6EC; color: #159A5B; }
+  .ph-ico { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; flex: none; font-size: 12px; font-weight: 700; }
+  .ph-ico.ok { background: #E3F6EC; color: #159A5B; }
+  .ph-ico.wait { background: #EEF0F5; color: #6A7383; }
+  .ph-nav { position: absolute; bottom: 0; left: 0; right: 0; height: 56px; background: #fff; border-top: 1px solid #E8EBF2; display: grid; grid-template-columns: repeat(4, 1fr); padding: 8px 6px 10px; font-size: 9.5px; font-weight: 500; color: #6A7383; }
+  .ph-nav div { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+  .ph-nav div.on { color: #0E1220; font-weight: 700; }
+  .ph-nav svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+  .float { position: absolute; background: #fff; color: #0E1220; border-radius: 14px; box-shadow: 0 24px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.1); font-family: var(--font-text); }
+  .float-wa { bottom: 78px; left: -72px; width: 238px; padding: 10px 12px; animation: floatY 7s ease-in-out 1s infinite; }
+  .float-wa .hd { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; min-width: 0; }
+  .float-wa .hd > div:last-child { min-width: 0; }
+  .float-wa .hd b { font-size: 11.5px; font-weight: 700; display: block; line-height: 1.1; }
+  .float-wa .hd small { font-size: 9.5px; color: #6A7383; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .float-wa .hd .wa-ico { width: 26px; height: 26px; border-radius: 8px; background: var(--wa); display: grid; place-items: center; flex: none; }
+  .float-wa p { font-size: 11px; line-height: 1.45; color: #2B3140; }
+  .float-wa p b { font-weight: 600; color: #0E1220; }
+  .float-wa .time { font-size: 9px; color: #6A7383; text-align: right; margin-top: 4px; }
+  .float-wa .time i { color: #34B7F1; font-style: normal; }
+  .float-sent { top: 88px; right: -64px; padding: 9px 12px; display: flex; align-items: center; gap: 8px; font-size: 11.5px; font-weight: 600; background: var(--lime); color: var(--lime-ink); animation: floatY 7s ease-in-out 2s infinite; }
+  .float-sent i { width: 18px; height: 18px; border-radius: 50%; background: var(--lime-ink); color: var(--lime); display: grid; place-items: center; font-size: 10px; font-style: normal; flex: none; }
+
+  /* STATS STRIP */
+  .stats { padding: 0; }
+  .stats .inner > div { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--ink-2); }
+  .stat { padding: 1.6rem 1.5rem; border-left: 1px solid var(--border); }
+  .stat:first-child { border-left: 0; }
+  .stat b { font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.2rem); font-weight: 800; letter-spacing: -0.04em; display: block; line-height: 1; color: var(--text); }
+  .stat b em { font-style: normal; color: var(--lime); }
+  .stat span { display: block; font-size: 0.82rem; color: var(--text-3); margin-top: 0.5rem; line-height: 1.45; }
+
+  /* ESTUDIO (producto) */
+  #estudio { background: linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%); }
+  .estudio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+  .pill-row { display: flex; gap: 0.45rem; flex-wrap: wrap; margin: 1.75rem 0 2rem; }
+  .pill { font-size: 0.76rem; font-weight: 600; padding: 0.32rem 0.75rem; border-radius: 100px; border: 1px solid var(--border-2); color: var(--text-2); background: rgba(255,255,255,0.03); }
+  .pill.live { border-color: rgba(37,211,102,0.35); color: var(--wa); background: rgba(37,211,102,0.08); display: inline-flex; align-items: center; gap: 0.4rem; }
+  .pill.live::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--wa); animation: livePulse 2s infinite; }
+  @keyframes livePulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.75)} }
+  .feat-list { list-style: none; display: flex; flex-direction: column; gap: 1.1rem; margin-top: 2rem; }
+  .feat-list li { display: flex; gap: 1rem; align-items: flex-start; }
+  .feat-ico { width: 40px; height: 40px; border-radius: 11px; background: var(--blue-dim); border: 1px solid var(--blue-border); display: grid; place-items: center; flex: none; }
+  .feat-list h3 { font-family: var(--font-display); font-size: 1.02rem; font-weight: 700; margin-bottom: 0.2rem; letter-spacing: -0.01em; }
+  .feat-list p { font-size: 0.9rem; color: var(--text-2); line-height: 1.65; }
+
+  /* WHATSAPP CHAT MOCKUP */
+  .wa-chat { width: 100%; max-width: 420px; margin: 0 auto; border-radius: 24px; overflow: hidden; background: #ECE5DD; color: #0E1220; box-shadow: 0 40px 90px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.08); font-family: var(--font-text); }
+  .wa-head { background: #075E54; color: #fff; padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+  .wa-head .av { width: 38px; height: 38px; border-radius: 50%; background: #fff; color: #075E54; display: grid; place-items: center; font-weight: 700; font-size: 13px; }
+  .wa-head b { display: block; font-size: 15px; font-weight: 600; line-height: 1.1; }
+  .wa-head small { font-size: 12px; opacity: 0.8; }
+  .wa-body { padding: 14px 12px 16px; display: flex; flex-direction: column; gap: 8px; background-image: radial-gradient(rgba(0,0,0,0.035) 1px, transparent 1px); background-size: 14px 14px; }
+  .wa-date { align-self: center; background: #fff; color: #5B6270; font-size: 11px; padding: 4px 10px; border-radius: 8px; box-shadow: 0 1px 1px rgba(0,0,0,0.08); margin: 2px 0; }
+  .wa-msg { max-width: 86%; background: #fff; border-radius: 12px; border-top-left-radius: 3px; padding: 8px 10px 6px; font-size: 13.5px; line-height: 1.45; box-shadow: 0 1px 1px rgba(0,0,0,0.08); }
+  .wa-msg.out { align-self: flex-end; background: #DCF8C6; border-top-left-radius: 12px; border-top-right-radius: 3px; }
+  .wa-msg b { font-weight: 600; }
+  .wa-msg .by { font-size: 11px; color: #6A7383; margin-top: 4px; }
+  .wa-msg .tm { font-size: 10px; color: #6A7383; text-align: right; margin-top: 2px; }
+  .wa-msg .tm i { color: #34B7F1; font-style: normal; }
+  .wa-file { background: #CFD9EE; border-radius: 8px; height: 64px; display: grid; place-items: center; font-size: 11px; font-weight: 600; color: #3A4660; margin-bottom: 6px; }
+  .wa-input { background: #F0F0F0; padding: 10px 12px; display: flex; gap: 8px; align-items: center; }
+  .wa-input div { flex: 1; background: #fff; border-radius: 100px; padding: 9px 14px; font-size: 13px; color: #8A93A3; }
+  .wa-input i { width: 36px; height: 36px; border-radius: 50%; background: #075E54; display: grid; place-items: center; }
 
   /* SERVICIOS */
-  #services { border-top: 1px solid var(--border); }
-  .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3rem; }
-  .service-card { background: var(--ink-2); border: 1px solid var(--border); border-radius: 18px; padding: 1.75rem; transition: border-color 0.3s, transform 0.3s; position: relative; overflow: hidden; }
+  .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+  .service-card { background: var(--ink-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem 1.5rem; position: relative; overflow: hidden; transition: border-color 0.3s, transform 0.3s, background 0.3s; display: flex; flex-direction: column; }
   .service-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--blue); transform: scaleX(0); transform-origin: left; transition: transform 0.35s; }
-  .service-card:hover { border-color: var(--blue-border); transform: translateY(-4px); }
+  .service-card:hover { border-color: var(--blue-border); transform: translateY(-4px); background: var(--ink-3); }
   .service-card:hover::after { transform: scaleX(1); }
-  .service-card.ai-card::after { background: var(--lime); }
-  .service-card.ai-card:hover { border-color: rgba(200,241,53,0.3); }
-  .service-icon { width: 44px; height: 44px; background: var(--blue-dim); border-radius: 11px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
-  .service-icon.lime { background: rgba(200,241,53,0.1); }
-  .service-card h3 { font-family: 'Geist', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; }
-  .service-card p { font-size: 0.82rem; color: rgba(248,250,255,0.5); line-height: 1.75; }
-  .ai-badge { display: inline-block; background: rgba(200,241,53,0.12); border: 1px solid rgba(200,241,53,0.25); color: var(--lime); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 100px; margin-bottom: 0.75rem; }
+  .service-card.hot::after { background: var(--lime); }
+  .service-card.hot:hover { border-color: rgba(200,241,53,0.35); }
+  .service-icon { width: 46px; height: 46px; background: var(--blue-dim); border: 1px solid var(--blue-border); border-radius: 12px; display: grid; place-items: center; margin-bottom: 1.2rem; }
+  .service-icon.lime { background: rgba(200,241,53,0.1); border-color: rgba(200,241,53,0.3); }
+  .service-card h3 { font-family: var(--font-display); font-size: 1.08rem; font-weight: 700; margin-bottom: 0.55rem; letter-spacing: -0.01em; }
+  .service-card p { font-size: 0.88rem; color: var(--text-2); line-height: 1.7; flex: 1; }
+  .service-card .ex { margin-top: 1.1rem; padding-top: 0.9rem; border-top: 1px solid var(--border); font-size: 0.76rem; color: var(--text-3); }
+  .service-card .ex b { color: var(--blue-soft); font-weight: 600; }
+  .badge { position: absolute; top: 1.1rem; right: 1.1rem; background: rgba(200,241,53,0.12); border: 1px solid rgba(200,241,53,0.3); color: var(--lime); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.22rem 0.6rem; border-radius: 100px; }
 
   /* TRABAJOS */
-  #work { background: var(--ink-2); border-top: 1px solid var(--border); }
-  .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
-  .work-card { background: var(--ink-3); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; transition: border-color 0.3s, transform 0.3s; }
+  #work { background: var(--ink-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .work-card { background: var(--ink-3); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: border-color 0.3s, transform 0.3s; display: flex; flex-direction: column; }
   .work-card:hover { border-color: var(--blue-border); transform: translateY(-4px); }
-  .work-preview { height: 230px; position: relative; overflow: hidden; }
-  .work-preview img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform 0.4s ease; }
+  .work-preview { aspect-ratio: 16 / 9; position: relative; overflow: hidden; background: var(--ink-4); }
+  .work-preview img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform 0.5s ease; }
   .work-card:hover .work-preview img { transform: scale(1.03); }
-  .work-preview-paola { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
-  .work-preview-poli { background: linear-gradient(135deg, #0d1117 0%, #1a1a2e 50%, #0a2a4a 100%); }
-  .work-preview-bandurrias { background: linear-gradient(135deg, #0b0f0a 0%, #14201a 50%, #1e2a12 100%); }
-  .work-preview-repuestos { background: linear-gradient(135deg, #0e0b1a 0%, #1a1530 50%, #2a1f4a 100%); }
-  .work-info { padding: 1.5rem; }
-  .work-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem; }
-  .work-tag { font-size: 0.72rem; font-weight: 600; padding: 0.2rem 0.65rem; border-radius: 100px; background: var(--blue-dim); border: 1px solid var(--blue-border); color: #6B9FFF; }
-  .work-tag.green { background: rgba(200,241,53,0.08); border-color: rgba(200,241,53,0.2); color: var(--lime); }
-  .work-card h3 { font-family: 'Geist', sans-serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
-  .work-card p { font-size: 0.83rem; color: rgba(248,250,255,0.5); line-height: 1.7; margin-bottom: 1.1rem; }
-  .work-link { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: #6B9FFF; text-decoration: none; padding: 0.55rem 1.1rem; border: 1px solid var(--blue-border); border-radius: 100px; background: var(--blue-dim); transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s; }
-  .work-link:hover { background: rgba(26,107,255,0.22); border-color: var(--blue); color: var(--white); transform: translateY(-2px); }
+  .work-preview::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(22,27,41,0.9) 100%); pointer-events: none; }
+  .work-live { position: absolute; top: 0.9rem; left: 0.9rem; z-index: 1; display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; background: rgba(10,14,26,0.7); backdrop-filter: blur(8px); padding: 0.3rem 0.65rem; border-radius: 100px; border: 1px solid rgba(255,255,255,0.15); }
+  .work-live::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--wa); }
+  .work-info { padding: 1.4rem 1.5rem 1.5rem; display: flex; flex-direction: column; flex: 1; }
+  .work-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.9rem; }
+  .work-tag { font-size: 0.7rem; font-weight: 600; padding: 0.22rem 0.6rem; border-radius: 100px; background: var(--blue-dim); border: 1px solid var(--blue-border); color: var(--blue-soft); }
+  .work-tag.green { background: rgba(200,241,53,0.08); border-color: rgba(200,241,53,0.22); color: var(--lime); }
+  .work-card h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin-bottom: 0.2rem; letter-spacing: -0.015em; }
+  .work-card .who { font-size: 0.8rem; color: var(--text-3); margin-bottom: 0.7rem; }
+  .work-card p { font-size: 0.88rem; color: var(--text-2); line-height: 1.7; margin-bottom: 1.2rem; flex: 1; }
+  .work-link { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.84rem; font-weight: 600; color: var(--blue-soft); text-decoration: none; transition: gap 0.2s, color 0.2s; align-self: flex-start; }
+  .work-link:hover { color: var(--text); gap: 0.7rem; }
 
   /* PROCESO */
-  #process { border-top: 1px solid var(--border); }
-  .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; }
-  .process-step { background: var(--ink-2); border: 1px solid var(--border); border-radius: 18px; padding: 1.75rem; }
-  .step-num { font-family: 'Geist', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; color: #6B9FFF; margin-bottom: 1rem; }
-  .process-step h3 { font-family: 'Geist', sans-serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; }
-  .process-step p { font-size: 0.85rem; color: rgba(248,250,255,0.5); line-height: 1.75; }
+  .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; counter-reset: step; }
+  .process-step { background: var(--ink-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.6rem 1.4rem; position: relative; }
+  .step-num { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--blue); color: #fff; font-family: var(--font-display); font-size: 0.85rem; font-weight: 800; margin-bottom: 1.1rem; }
+  .process-step:last-child .step-num { background: var(--lime); color: var(--lime-ink); }
+  .process-step h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+  .process-step p { font-size: 0.87rem; color: var(--text-2); line-height: 1.7; }
+  .process-step .when { display: inline-block; margin-top: 0.9rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue-soft); }
+  .terms { margin-top: 1.25rem; display: grid; grid-template-columns: 1.2fr 2fr; gap: 1rem; background: linear-gradient(135deg, rgba(26,107,255,0.14), rgba(200,241,53,0.06)); border: 1px solid var(--blue-border); border-radius: var(--radius); padding: 1.75rem; align-items: center; }
+  .terms h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 0.5rem; }
+  .terms > div > p { font-size: 0.88rem; color: var(--text-2); line-height: 1.65; }
+  .terms-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; list-style: none; }
+  .terms-list li { display: flex; gap: 0.7rem; align-items: flex-start; font-size: 0.88rem; color: var(--text-2); line-height: 1.5; background: rgba(10,14,26,0.45); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.8rem 0.9rem; }
+  .terms-list li b { color: var(--text); font-weight: 600; display: block; }
+  .terms-list li svg { flex: none; margin-top: 2px; }
 
-  /* CALENDARIO */
-  #calendar { border-top: 1px solid var(--border); }
-  .calendar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
-  .cal-wrap { background: var(--ink-2); border: 1px solid var(--border); border-radius: 20px; padding: 1.75rem; }
-  .cal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
-  .cal-header h3 { font-family: 'Geist', sans-serif; font-size: 1rem; font-weight: 700; }
-  .cal-nav { display: flex; gap: 0.5rem; }
-  .cal-btn { background: var(--ink-3); border: 1px solid var(--border); color: var(--white); width: 30px; height: 30px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; transition: background 0.2s; display: flex; align-items: center; justify-content: center; }
-  .cal-btn:hover { background: var(--blue-dim); border-color: var(--blue-border); }
-  .cal-days-header { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-bottom: 6px; }
-  .cal-day-name { text-align: center; font-size: 0.7rem; font-weight: 600; color: var(--muted); padding: 4px 0; }
-  .cal-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
-  .cal-day { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 0.82rem; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; }
-  .cal-day.empty { cursor: default; }
-  .cal-day.past { color: rgba(248,250,255,0.2); cursor: default; }
-  .cal-day.available { background: rgba(200,241,53,0.1); color: var(--lime); border-color: rgba(200,241,53,0.2); font-weight: 600; }
-  .cal-day.available:hover { background: rgba(200,241,53,0.2); transform: scale(1.08); }
-  .cal-day.today { border-color: var(--blue); color: #6B9FFF; font-weight: 700; }
-  .cal-day.selected { background: var(--blue); color: #fff; border-color: var(--blue); font-weight: 700; }
-  .cal-legend { display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
-  .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.74rem; color: var(--muted); }
-  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
-  .cal-info h3 { font-family: 'Geist', sans-serif; font-size: 1.4rem; font-weight: 800; margin-bottom: 0.75rem; }
-  .cal-info p { font-size: 0.9rem; color: rgba(248,250,255,0.55); line-height: 1.8; margin-bottom: 2rem; }
-  .contact-options { display: flex; flex-direction: column; gap: 0.75rem; }
-  .contact-btn { display: flex; align-items: center; gap: 0.85rem; padding: 1rem 1.25rem; border-radius: 14px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: transform 0.2s, opacity 0.2s; border: 1px solid transparent; }
-  .contact-btn:hover { transform: translateY(-2px); opacity: 0.9; }
-  .contact-btn.wa { background: rgba(37,211,102,0.12); border-color: rgba(37,211,102,0.25); color: #25D366; }
-  .contact-btn.ig { background: rgba(225,48,108,0.1); border-color: rgba(225,48,108,0.2); color: #E1306C; }
-  .contact-btn-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .contact-btn.wa .contact-btn-icon { background: rgba(37,211,102,0.15); }
+  /* CONTACTO */
+  #contact { border-top: 1px solid var(--border); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+  .contact-info h2 { margin-bottom: 0.75rem; }
+  .contact-info > p { font-size: 0.98rem; color: var(--text-2); line-height: 1.75; margin-bottom: 2rem; max-width: 46ch; }
+  .contact-options { display: flex; flex-direction: column; gap: 0.7rem; }
+  .contact-btn { display: flex; align-items: center; gap: 0.9rem; padding: 0.95rem 1.15rem; border-radius: 14px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: transform 0.2s, border-color 0.2s, background 0.2s; border: 1px solid var(--border); background: var(--ink-2); color: var(--text); }
+  .contact-btn:hover { transform: translateY(-2px); border-color: var(--border-2); background: var(--ink-3); }
+  .contact-btn-icon { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; flex-shrink: 0; }
+  .contact-btn.wa .contact-btn-icon { background: rgba(37,211,102,0.14); }
   .contact-btn.ig .contact-btn-icon { background: rgba(225,48,108,0.12); }
-  .contact-btn-label { font-size: 0.75rem; opacity: 0.65; font-weight: 400; display: block; }
-  #cal-wa-link { display: none; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1rem; padding: 0.75rem 1.25rem; border-radius: 12px; background: rgba(37,211,102,0.08); border: 1px solid rgba(37,211,102,0.2); color: #25D366; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.2s; }
-  #cal-wa-link:hover { background: rgba(37,211,102,0.15); transform: translateY(-1px); }
-  #cal-wa-link.visible { display: flex; }
+  .contact-btn.mail .contact-btn-icon { background: var(--blue-dim); }
+  .contact-btn-label { font-size: 0.75rem; color: var(--text-3); font-weight: 500; display: block; }
+  .contact-btn .arrow { margin-left: auto; color: var(--text-3); }
+  .cal-wrap { background: var(--ink-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+  .cal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.1rem; }
+  .cal-header h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; text-transform: capitalize; }
+  .cal-nav { display: flex; gap: 0.4rem; }
+  .cal-btn { background: var(--ink-3); border: 1px solid var(--border); color: var(--text); width: 32px; height: 32px; border-radius: 9px; cursor: pointer; font-size: 1rem; transition: background 0.2s, border-color 0.2s; display: grid; place-items: center; }
+  .cal-btn:hover { background: var(--blue-dim); border-color: var(--blue-border); }
+  .cal-days-header, .cal-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+  .cal-days-header { margin-bottom: 4px; }
+  .cal-day-name { text-align: center; font-size: 0.68rem; font-weight: 700; color: var(--text-3); padding: 4px 0; text-transform: uppercase; letter-spacing: 0.05em; }
+  .cal-day { aspect-ratio: 1; display: grid; place-items: center; border-radius: 9px; font-size: 0.85rem; cursor: pointer; transition: background 0.15s, transform 0.15s, border-color 0.15s; border: 1px solid transparent; }
+  .cal-day.empty { cursor: default; }
+  .cal-day.past { color: rgba(243,246,255,0.18); cursor: default; }
+  .cal-day.available { background: rgba(255,255,255,0.04); color: var(--text); border-color: var(--border); font-weight: 500; }
+  .cal-day.available:hover { background: rgba(200,241,53,0.14); border-color: rgba(200,241,53,0.4); color: var(--lime); transform: scale(1.06); }
+  .cal-day.today { border-color: var(--blue); color: var(--blue-soft); font-weight: 700; }
+  .cal-day.selected, .cal-day.selected:hover { background: var(--lime); color: var(--lime-ink); border-color: var(--lime); font-weight: 700; transform: none; }
+  .cal-legend { display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.74rem; color: var(--text-3); }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+  #cal-wa-link { display: none; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1rem; width: 100%; }
+  #cal-wa-link.visible { display: inline-flex; animation: fadeUp 0.3s ease both; }
+  .cal-hint { font-size: 0.8rem; color: var(--text-3); margin-top: 0.9rem; text-align: center; }
 
   /* FOOTER */
-  footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-  footer p { font-size: 0.78rem; color: var(--muted); }
+  footer { border-top: 1px solid var(--border); padding: 3rem 0 2rem; background: var(--ink-2); }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2rem; margin-bottom: 2.5rem; }
+  .foot-brand p { font-size: 0.86rem; color: var(--text-3); margin-top: 0.9rem; max-width: 34ch; line-height: 1.6; }
+  .foot-col h4 { font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-3); margin-bottom: 0.9rem; }
+  .foot-col a { display: block; color: var(--text-2); text-decoration: none; font-size: 0.9rem; padding: 0.25rem 0; transition: color 0.2s; }
+  .foot-col a:hover { color: var(--text); }
+  .foot-bottom { border-top: 1px solid var(--border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; font-size: 0.78rem; color: var(--text-3); }
+  .foot-bottom a { color: inherit; text-decoration: none; }
+  .foot-bottom a:hover { color: var(--text); }
 
   /* ANIMATIONS */
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-  h1 { animation: fadeUp 0.5s 0.1s ease both; }
-  .hero-sub { animation: fadeUp 0.5s 0.2s ease both; }
-  .hero-actions { animation: fadeUp 0.5s 0.3s ease both; }
-
-  @media (min-width: 1600px) {
-    .hero-inner { max-width: 1700px; }
-    .dash { padding: 1.75rem; }
-    .kpi-val { font-size: 1.15rem; }
-    .chart-bars { height: 110px; }
-    .dash-title { font-size: 1rem; }
-    .dash-ai-text { font-size: 0.82rem; }
-  }
-  @media (min-width: 2200px) {
-    .hero-inner { max-width: 2000px; }
-    .dash { padding: 2rem; }
-    .kpi-val { font-size: 1.3rem; }
-    .chart-bars { height: 130px; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  .hero .eyebrow { animation: fadeUp 0.5s 0.05s ease both; }
+  .hero h1 { animation: fadeUp 0.5s 0.15s ease both; }
+  .hero-sub { animation: fadeUp 0.5s 0.25s ease both; }
+  .hero-actions { animation: fadeUp 0.5s 0.35s ease both; }
+  .hero-proof { animation: fadeUp 0.5s 0.45s ease both; }
+  .hero-visual { animation: fadeUp 0.7s 0.3s ease both; }
+  html.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  html.js .reveal.in { opacity: 1; transform: none; }
+  html.js .reveal[data-delay="1"] { transition-delay: 0.08s; }
+  html.js .reveal[data-delay="2"] { transition-delay: 0.16s; }
+  html.js .reveal[data-delay="3"] { transition-delay: 0.24s; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    html.js .reveal { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
   }
 
   /* RESPONSIVE */
-  @media (max-width: 768px) {
-    nav { padding: 0.85rem 1.25rem; }
-    .nav-links { display: none; }
-    .nav-cta { padding: 0.45rem 0.9rem; font-size: 0.8rem; }
-    .lang-btn { padding: 0.25rem 0.55rem; font-size: 0.72rem; }
-    .logo-name { font-size: 1rem; }
-    nav svg { width: 26px; height: 26px; }
-    .hero { padding: 5.5rem 1.25rem 3rem; min-height: auto; }
-    .hero-content { text-align: center; }
-    .hero-sub { max-width: 100%; margin-left: auto; margin-right: auto; }
-    .hero-actions { justify-content: center; }
-    .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; width: 100%; }
-    .dash { transform: none; }
-    .hero-visual { width: 100%; min-width: 0; padding: 0; }
-    section { padding: 4rem 1.25rem; }
-    h1 { font-size: clamp(2rem, 10vw, 3rem); line-height: 1.08; letter-spacing: -0.02em; }
-    h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
-    .services-grid { grid-template-columns: 1fr 1fr; }
-    .work-grid { grid-template-columns: 1fr; }
-    .process-grid { grid-template-columns: 1fr; }
-    .hero-proof { margin-left: auto; margin-right: auto; }
-    .calendar-grid { grid-template-columns: 1fr; gap: 2rem; }
-    footer { flex-direction: column; text-align: center; }
+  @media (max-width: 1024px) {
+    .services-grid, .process-grid { grid-template-columns: 1fr 1fr; }
+    .hero-inner { grid-template-columns: 1fr 0.85fr; gap: 2rem; }
   }
-  @media (max-width: 480px) {
-    .services-grid { grid-template-columns: 1fr; }
-    .dash { padding: 0.9rem; }
-    .dash-title { font-size: 0.8rem; }
-    .dash-subtitle { font-size: 0.62rem; }
-    .dash-kpis { gap: 0.35rem; }
-    .kpi { padding: 0.5rem 0.55rem; }
-    .kpi-val { font-size: 0.82rem; }
-    .kpi-label { font-size: 0.58rem; }
-    .kpi-delta { font-size: 0.58rem; }
-    .chart-bars { height: 60px; }
-    .bar-wrap span { font-size: 0.52rem; }
-    .dash-ai { padding: 0.65rem; gap: 0.5rem; }
-    .dash-ai-text { font-size: 0.7rem; }
+  @media (max-width: 860px) {
+    .nav-links, .nav-cta { display: none; }
+    .burger { display: flex; }
+    .hero { min-height: auto; padding: 6rem 0 3.5rem; }
+    .hero-inner { grid-template-columns: 1fr; gap: 3.5rem; }
+    .hero-content { text-align: left; }
+    h1 { max-width: 16ch; }
+    .hero-visual { padding: 0 0 1rem; }
+    .stats .inner > div { grid-template-columns: 1fr 1fr; }
+    .stat:nth-child(3) { border-left: 0; }
+    .stat:nth-child(n+3) { border-top: 1px solid var(--border); }
+    .estudio-grid { grid-template-columns: 1fr; }
+    .estudio-grid .wa-chat { order: 2; }
+    .work-grid { grid-template-columns: 1fr; }
+    .terms { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+    .foot-brand { grid-column: 1 / -1; }
+  }
+  @media (max-width: 560px) {
+    .logo-name { font-size: 1.08rem; }
+    .hero { padding-top: 5.5rem; }
+    h1 { font-size: clamp(2.35rem, 11vw, 3rem); letter-spacing: -0.035em; }
+    .hero-actions .btn { width: 100%; }
+    .phone-wrap { width: 280px; }
+    .phone { width: 280px; height: 560px; }
+    .hero-visual { padding-bottom: 2.75rem; }
+    .float-wa { left: -12px; width: 224px; bottom: -34px; }
+    .float-sent { right: -12px; top: 76px; }
+    .services-grid, .process-grid, .terms-list { grid-template-columns: 1fr; }
+    .stats .inner > div { grid-template-columns: 1fr 1fr; }
+    .stat { padding: 1.2rem 1rem; }
+    .terms { padding: 1.4rem; }
+    .section-head { margin-bottom: 1.75rem; }
+    .wa-chat { max-width: 100%; border-radius: 18px; }
+    .cal-wrap { padding: 1.1rem; }
+    .foot-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .foot-bottom { flex-direction: column; align-items: flex-start; }
   }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
-  <a href="#home" class="logo-wrap">
-    <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
-      <line x1="4" y1="18" x2="32" y2="18" stroke="#1A6BFF" stroke-width="1.5" opacity="0.5"/>
-      <line x1="10" y1="6" x2="26" y2="30" stroke="#C8F135" stroke-width="2"/>
-      <circle cx="10" cy="6" r="3" fill="#1A6BFF"/>
-      <circle cx="26" cy="6" r="3" fill="#1A6BFF"/>
-      <circle cx="4" cy="18" r="3" fill="#1A6BFF"/>
-      <circle cx="26" cy="30" r="3" fill="#1A6BFF"/>
-      <circle cx="10" cy="30" r="3" fill="#1A6BFF"/>
-      <circle cx="32" cy="18" r="4" fill="#C8F135"/>
-    </svg>
-    <span class="logo-name">sistemi<span>k</span></span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#services" data-i18n="nav.services">Servicios</a></li>
-    <li><a href="#work" data-i18n="nav.work">Trabajos</a></li>
-    <li><a href="#process" data-i18n="nav.process">Proceso</a></li>
-    <li><a href="#calendar" data-i18n="nav.calendar">Agenda</a></li>
-  </ul>
-  <div class="nav-right">
-    <button class="lang-btn" id="lang-toggle" onclick="toggleLang()">EN</button>
-    <a href="#calendar" class="nav-cta" data-i18n="nav.cta">Hablemos →</a>
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo-wrap" aria-label="Sistemik, inicio">
+      <svg width="30" height="30" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+        <line x1="4" y1="18" x2="32" y2="18" stroke="#1A6BFF" stroke-width="1.5" opacity="0.5"/>
+        <line x1="10" y1="6" x2="26" y2="30" stroke="#C8F135" stroke-width="2"/>
+        <circle cx="10" cy="6" r="3" fill="#1A6BFF"/><circle cx="26" cy="6" r="3" fill="#1A6BFF"/>
+        <circle cx="4" cy="18" r="3" fill="#1A6BFF"/><circle cx="26" cy="30" r="3" fill="#1A6BFF"/>
+        <circle cx="10" cy="30" r="3" fill="#1A6BFF"/><circle cx="32" cy="18" r="4" fill="#C8F135"/>
+      </svg>
+      <span class="logo-name">sistemi<span>k</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#estudio" data-i18n="nav.estudio">Estudio</a></li>
+      <li><a href="#services" data-i18n="nav.services">Servicios</a></li>
+      <li><a href="#work" data-i18n="nav.work">Trabajos</a></li>
+      <li><a href="#process" data-i18n="nav.process">Cómo trabajamos</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="lang-btn" id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">EN</button>
+      <a href="#" class="btn btn-wa nav-cta" data-wa>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.855L.057 23.716a.5.5 0 00.609.61l5.919-1.463A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.002-1.368l-.36-.214-3.713.918.952-3.629-.235-.373A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+        <span data-i18n="nav.cta">Hablemos</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Menú" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#estudio" data-i18n="nav.estudio">Estudio</a>
+    <a href="#services" data-i18n="nav.services">Servicios</a>
+    <a href="#work" data-i18n="nav.work">Trabajos</a>
+    <a href="#process" data-i18n="nav.process">Cómo trabajamos</a>
+    <a href="#contact" data-i18n="nav.contact">Contacto</a>
+    <a href="#" class="btn btn-wa" data-wa><span data-i18n="nav.cta.long">Hablemos por WhatsApp</span></a>
   </div>
 </nav>
 
@@ -295,95 +434,181 @@
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-inner">
-  <div class="hero-content">
-    <h1 data-i18n-html="hero.h1">Tecnología que<br><em>ordena</em> y hace<br>crecer tu negocio.</h1>
-    <p class="hero-sub" data-i18n="hero.sub">Sistemik es la consultora de sistemas para pymes. Diseño, desarrollo e inteligencia artificial para que tu negocio venda más, trabaje menos y escale de verdad.</p>
-    <div class="hero-actions">
-      <a href="#calendar" class="btn-lime" data-i18n="hero.cta">Agendá una consulta →</a>
-      <a href="#work" class="btn-ghost" data-i18n="hero.secondary">Ver trabajos</a>
-    </div>
-    <p class="hero-proof" data-i18n="hero.proof">Plataformas en producción para salud, automotor, deporte y e-commerce.</p>
-  </div>
-
-  <!-- DASHBOARD VISUAL -->
-  <div class="hero-visual">
-
-    <div class="dash">
-      <div class="dash-header">
-        <div>
-          <div class="dash-title" data-i18n="dash.title">Panel de Ventas</div>
-          <div class="dash-subtitle" data-i18n="dash.subtitle">con IA · Tiempo real</div>
-        </div>
-        <div class="dash-live"><div class="live-dot"></div><span data-i18n="dash.live">En vivo</span></div>
+    <div class="hero-content">
+      <div class="eyebrow"><i></i><span data-i18n="hero.eyebrow">Consultora de sistemas · San Carlos de Bariloche</span></div>
+      <h1 data-i18n-html="hero.h1">Sistemas que <em>trabajan solos</em> para tu negocio.</h1>
+      <p class="hero-sub" data-i18n-html="hero.sub">Apps, bots de WhatsApp y herramientas internas para pymes y profesionales. <strong>Sin costo inicial</strong>, por un abono mensual, y en producción en semanas.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-wa" data-wa>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.855L.057 23.716a.5.5 0 00.609.61l5.919-1.463A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.002-1.368l-.36-.214-3.713.918.952-3.629-.235-.373A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+          <span data-i18n="hero.cta">Hablemos por WhatsApp</span>
+        </a>
+        <a href="#estudio" class="btn btn-ghost" data-i18n="hero.secondary">Conocé Estudio ↓</a>
       </div>
-      <div class="dash-kpis">
-        <div class="kpi">
-          <div class="kpi-label" data-i18n="kpi.1.label">Ventas hoy</div>
-          <div class="kpi-val">$284.500</div>
-          <div class="kpi-delta up">+18% ↑</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label" data-i18n="kpi.2.label">Conversión</div>
-          <div class="kpi-val">34.2%</div>
-          <div class="kpi-delta up">+5.1% ↑</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label" data-i18n="kpi.3.label">Ticket prom.</div>
-          <div class="kpi-val">$12.300</div>
-          <div class="kpi-delta down">-2% ↓</div>
-        </div>
-      </div>
-      <div class="dash-chart">
-        <div class="chart-label" data-i18n="chart.label">Ventas últimos 7 días</div>
-        <div class="chart-bars" id="chart-bars"></div>
-      </div>
-      <div class="dash-ai">
-        <div class="dash-ai-icon">✦</div>
-        <div>
-          <div class="dash-ai-title" data-i18n="ai.insight.title">Insight de IA</div>
-          <div class="dash-ai-text" data-i18n="ai.insight.text">Los jueves convertís 2.4x más. Activar campaña automática puede sumar $48.000 esta semana.</div>
+      <div class="hero-proof">
+        <b data-i18n="hero.proof">En producción para:</b>
+        <div class="proof-chips">
+          <span data-i18n="proof.1">Estudios contables</span>
+          <span data-i18n="proof.2">Salud</span>
+          <span data-i18n="proof.3">Automotor</span>
+          <span data-i18n="proof.4">Deporte</span>
+          <span data-i18n="proof.5">Comercio</span>
         </div>
       </div>
     </div>
-  </div>
 
-  </div><!-- /hero-inner -->
+    <!-- PHONE: la app Estudio -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="ph-notch"></div>
+          <div class="ph-top">
+            <div><h4 data-i18n="ph.hello">Hola, Estudio Lagos</h4><small data-i18n="ph.date">Miércoles 21 de octubre</small></div>
+            <div class="ph-avatar">E</div>
+          </div>
+          <div class="ph-body">
+            <div class="ph-hero">
+              <small data-i18n="ph.fees">Honorarios de octubre</small>
+              <b>$ 820.000</b>
+              <div class="row"><span data-i18n="ph.clients">8 clientes activos</span><span data-i18n="ph.due">vencen el 10</span></div>
+            </div>
+            <div class="ph-card">
+              <h5 data-i18n="ph.next">Próximos vencimientos</h5>
+              <div class="ph-row"><div class="ph-date soon"><b>21</b><small>oct</small></div><div class="t"><b>IVA</b><small>Óptica Mitre</small></div><span class="ph-chip warn" data-i18n="ph.today">Hoy</span></div>
+              <div class="ph-row"><div class="ph-date"><b>22</b><small>oct</small></div><div class="t"><b>IVA</b><small>Cabañas Lago Sur</small></div><span class="ph-chip" data-i18n="ph.tomorrow">Mañana</span></div>
+              <div class="ph-row"><div class="ph-date"><b>10</b><small>nov</small></div><div class="t"><b data-i18n="ph.fees2">Honorarios</b><small data-i18n="ph.clients2">8 clientes</small></div><span class="ph-chip" data-i18n="ph.days">20 días</span></div>
+            </div>
+            <div class="ph-card">
+              <h5 data-i18n="ph.auto">Envíos automáticos</h5>
+              <div class="ph-row"><div class="ph-ico ok">✓</div><div class="t"><b data-i18n="ph.rem1">Recordatorio Monotributo</b><small data-i18n="ph.rem1.sub">Enviado 19/10 · 4 clientes · WhatsApp</small></div></div>
+              <div class="ph-row"><div class="ph-ico wait">◷</div><div class="t"><b data-i18n="ph.rem2">Recordatorio IVA</b><small data-i18n="ph.rem2.sub">Sale hoy 18:00 · 2 clientes</small></div></div>
+            </div>
+          </div>
+          <div class="ph-nav">
+            <div class="on"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z"/></svg><span data-i18n="ph.nav1">Inicio</span></div>
+            <div><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0M16 4.5a3.5 3.5 0 010 7M21.5 20a6.5 6.5 0 00-4-6"/></svg><span data-i18n="ph.nav2">Clientes</span></div>
+            <div><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4z"/></svg><span data-i18n="ph.nav3">Envíos</span></div>
+            <div><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><span data-i18n="ph.nav4">Cobranza</span></div>
+          </div>
+        </div>
+        <div class="float float-wa">
+          <div class="hd">
+            <div class="wa-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.855L.057 23.716a.5.5 0 00.609.61l5.919-1.463A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.002-1.368l-.36-.214-3.713.918.952-3.629-.235-.373A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg></div>
+            <div><b>Estudio Lagos</b><small data-i18n="fl.sub">Mensaje a Martín · Panadería El Ñire</small></div>
+          </div>
+          <p data-i18n-html="fl.msg">Hola Martín, tus vencimientos de octubre: <b>Honorarios · $ 70.000 · 10/10</b> · Monotributo · 20/10. Transferí al alias <b>lagos.estudio</b> y mandame el comprobante por acá.</p>
+          <div class="time">09:00 <i>✓✓</i></div>
+        </div>
+        <div class="float float-sent"><i>✓</i><span data-i18n="fl.sent">24 avisos enviados hoy</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="inner">
+    <div class="reveal">
+      <div class="stat"><b>$ 0</b><span data-i18n="stat.1">de costo inicial. La carga de tus datos la hacemos nosotros.</span></div>
+      <div class="stat"><b>2 <em data-i18n="stat.2.unit">sem.</em></b><span data-i18n="stat.2">hasta la primera etapa funcionando con tus clientes reales.</span></div>
+      <div class="stat"><b>+80</b><span data-i18n="stat.3">personas usan una de nuestras apps todas las semanas.</span></div>
+      <div class="stat"><b>24/7</b><span data-i18n="stat.4">avisos automáticos por WhatsApp y mail, con la API oficial de Meta.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTUDIO -->
+<section id="estudio">
+  <div class="inner">
+    <div class="estudio-grid">
+      <div class="reveal">
+        <div class="section-label" data-i18n="estudio.label">Producto · Para estudios contables</div>
+        <h2 data-i18n-html="estudio.h2">Tus clientes reciben sus vencimientos y <em>pagan a tiempo</em>, sin que armes un solo mensaje.</h2>
+        <p class="section-intro" data-i18n="estudio.intro">Estudio es la app de Sistemik para contadores. Cargamos tus clientes con su CUIT y sus honorarios, y la herramienta hace el resto desde tu propio número de WhatsApp.</p>
+        <ul class="feat-list">
+          <li>
+            <div class="feat-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7FAAFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/><circle cx="8" cy="14" r="1.2" fill="#C8F135" stroke="none"/></svg></div>
+            <div><h3 data-i18n="feat.1.t">El 1° de cada mes, el aviso</h3><p data-i18n="feat.1.d">A cada cliente le llega lo que le vence ese mes y cuánto te tiene que pagar. Por WhatsApp o por mail, según el cliente.</p></div>
+          </li>
+          <li>
+            <div class="feat-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7FAAFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M10.3 21a1.9 1.9 0 003.4 0"/></svg></div>
+            <div><h3 data-i18n="feat.2.t">El día antes, el recordatorio</h3><p data-i18n="feat.2.d">Un mensaje corto antes de cada vencimiento de ARCA, Ingresos Brutos u honorarios. Menos clientes colgados, menos reclamos.</p></div>
+          </li>
+          <li>
+            <div class="feat-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7FAAFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+            <div><h3 data-i18n="feat.3.t">El comprobante, registrado</h3><p data-i18n="feat.3.d">Cuando te pagan, mandan el comprobante por el mismo chat y te queda anotado quién pagó, cuánto y cuándo. Lo ves desde el celu.</p></div>
+          </li>
+          <li>
+            <div class="feat-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7FAAFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 010 18M12 3a15 15 0 000 18M3 12h18"/></svg></div>
+            <div><h3 data-i18n="feat.4.t">Tu estudio, tu marca</h3><p data-i18n="feat.4.d">Textos, logo y colores propios. Si un cliente responde con una consulta, el bot se la deriva a tu WhatsApp.</p></div>
+          </li>
+        </ul>
+        <div class="pill-row">
+          <span class="pill live" data-i18n="pill.live">En producción</span>
+          <span class="pill" data-i18n="pill.1">Abono mensual</span>
+          <span class="pill" data-i18n="pill.2">Sin costo inicial</span>
+          <span class="pill" data-i18n="pill.3">Sin permanencia</span>
+          <span class="pill" data-i18n="pill.4">Carga inicial incluida</span>
+        </div>
+        <a href="#" class="btn btn-lime" data-wa="estudio"><span data-i18n="estudio.cta">Quiero verlo en mi estudio</span> →</a>
+      </div>
+
+      <!-- CHAT: lo que recibe el cliente del estudio -->
+      <div class="wa-chat reveal" data-delay="1" aria-hidden="true">
+        <div class="wa-head">
+          <div class="av">EL</div>
+          <div><b>Estudio Lagos</b><small data-i18n="wa.biz">Cuenta de empresa</small></div>
+        </div>
+        <div class="wa-body">
+          <div class="wa-date" data-i18n="wa.d1">1 de octubre</div>
+          <div class="wa-msg" data-i18n-html="wa.m1">Hola Martín, tus vencimientos de octubre:<br>• Honorarios · $ 70.000 · <b>10/10</b><br>• Monotributo · <b>20/10</b><br>Transferí al alias <b>lagos.estudio</b> y mandame el comprobante por acá.<div class="by">Estudio Lagos · Bariloche</div><div class="tm">09:00</div></div>
+          <div class="wa-date" data-i18n="wa.d2">9 de octubre</div>
+          <div class="wa-msg" data-i18n-html="wa.m2">Recordatorio: mañana <b>10/10</b> vencen los honorarios de octubre, $ 70.000. Alias <b>lagos.estudio</b>.<div class="tm">18:00</div></div>
+          <div class="wa-date" data-i18n="wa.d3">10 de octubre</div>
+          <div class="wa-msg out" data-i18n-html="wa.m3"><div class="wa-file">comprobante.jpg</div>Listo, te transferí<div class="tm">11:32 <i>✓✓</i></div></div>
+          <div class="wa-msg" data-i18n-html="wa.m4">✅ Recibido, Martín. Registré tu pago de octubre por $ 70.000. El estudio lo confirma cuando lo vea acreditado.<div class="tm">11:32</div></div>
+        </div>
+        <div class="wa-input"><div data-i18n="wa.input">Mensaje</div><i><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M3 11.5L21 3l-8.5 18-2.5-7.5z"/></svg></i></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- SERVICIOS -->
 <section id="services">
   <div class="inner">
-    <div class="section-label" data-i18n="services.label">Qué hacemos</div>
-    <h2 data-i18n="services.h2">Servicios que mueven el negocio.</h2>
+    <div class="section-head reveal">
+      <div>
+        <div class="section-label" data-i18n="services.label">Qué hacemos</div>
+        <h2 data-i18n="services.h2">Lo que tu negocio necesita, sin pagar de más.</h2>
+      </div>
+      <p class="section-intro" data-i18n="services.intro">Resolvemos primero lo que más te duele, rápido, y después sumamos el resto por etapas.</p>
+    </div>
     <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="3" width="16" height="11" rx="2" stroke="#1A6BFF" stroke-width="1.4"/><line x1="6" y1="17" x2="14" y2="17" stroke="#1A6BFF" stroke-width="1.4" stroke-linecap="round"/><polyline points="5,10 7.5,7 10,9 13,5" stroke="#C8F135" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3 data-i18n="service.web.title">Desarrollo Web & Apps</h3>
-        <p data-i18n="service.web.desc">Sitios y plataformas a medida con frontend público, backoffice y todo lo que tu operación necesite.</p>
+      <div class="service-card reveal">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FAAFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M10 18h4"/><path d="M8 7h8M8 10h5" stroke="#C8F135"/></svg></div>
+        <h3 data-i18n="service.1.t">Apps y plataformas a medida</h3>
+        <p data-i18n="service.1.d">Sitios, portales y paneles de administración construidos para cómo trabaja tu negocio. Se usan desde el celular y se instalan como una app, sin pasar por las tiendas.</p>
+        <div class="ex" data-i18n-html="service.1.ex"><b>Ejemplo:</b> turnos, cuotas y tienda del equipo Bandurrias.</div>
       </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="3.5" stroke="#1A6BFF" stroke-width="1.4"/><circle cx="10" cy="10" r="8" stroke="#1A6BFF" stroke-width="1" opacity="0.3"/><line x1="10" y1="2" x2="10" y2="5" stroke="#1A6BFF" stroke-width="1.4" stroke-linecap="round"/><line x1="10" y1="15" x2="10" y2="18" stroke="#1A6BFF" stroke-width="1.4" stroke-linecap="round"/><line x1="2" y1="10" x2="5" y2="10" stroke="#1A6BFF" stroke-width="1.4" stroke-linecap="round"/><line x1="15" y1="10" x2="18" y2="10" stroke="#1A6BFF" stroke-width="1.4" stroke-linecap="round"/></svg>
-        </div>
-        <h3 data-i18n="service.consulting.title">Consultoría Digital</h3>
-        <p data-i18n="service.consulting.desc">Analizamos tu negocio y trazamos una hoja de ruta digital clara, ejecutable y con resultados medibles.</p>
+      <div class="service-card hot reveal" data-delay="1">
+        <div class="badge" data-i18n="badge.hot">Lo más pedido</div>
+        <div class="service-icon lime"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8F135" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 01-12.6 7.4L3 21l1.6-5.4A8.5 8.5 0 1121 12z"/><path d="M8.5 11h7M8.5 14h4"/></svg></div>
+        <h3 data-i18n="service.2.t">Bots de WhatsApp</h3>
+        <p data-i18n="service.2.d">Avisos, recordatorios y respuestas automáticas desde tu propio número, con la API oficial de Meta. Tu cliente recibe lo que necesita y vos dejás de armar mensajes a mano.</p>
+        <div class="ex" data-i18n-html="service.2.ex"><b>Ejemplo:</b> los avisos de vencimientos y cobranza de Estudio.</div>
       </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="7" height="7" rx="1.5" stroke="#1A6BFF" stroke-width="1.4"/><rect x="11" y="2" width="7" height="7" rx="1.5" stroke="#1A6BFF" stroke-width="1.4"/><rect x="2" y="11" width="7" height="7" rx="1.5" stroke="#1A6BFF" stroke-width="1.4"/><rect x="11" y="11" width="7" height="7" rx="1.5" stroke="#C8F135" stroke-width="1.4"/></svg>
-        </div>
-        <h3 data-i18n="service.saas.title">Productos SaaS</h3>
-        <p data-i18n="service.saas.desc">Herramientas de software con membresía que automatizan procesos y generan ingresos recurrentes.</p>
+      <div class="service-card reveal" data-delay="2">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FAAFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2" stroke="#C8F135"/></svg></div>
+        <h3 data-i18n="service.3.t">Productos por abono</h3>
+        <p data-i18n="service.3.d">Herramientas ya construidas para tu rubro que se activan por partes y se adaptan a tu marca. Pagás un mensual bajo, sin inversión inicial ni permanencia.</p>
+        <div class="ex" data-i18n-html="service.3.ex"><b>Ejemplo:</b> Estudio, para estudios contables.</div>
       </div>
-      <div class="service-card ai-card">
-        <div class="ai-badge" data-i18n="ai.badge">Nuevo</div>
-        <div class="service-icon lime">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="3" fill="#C8F135" opacity="0.8"/><circle cx="10" cy="10" r="6" stroke="#C8F135" stroke-width="1" opacity="0.3"/><line x1="10" y1="4" x2="10" y2="7" stroke="#C8F135" stroke-width="1.4" stroke-linecap="round"/><line x1="10" y1="13" x2="10" y2="16" stroke="#C8F135" stroke-width="1.4" stroke-linecap="round"/><line x1="4" y1="10" x2="7" y2="10" stroke="#C8F135" stroke-width="1.4" stroke-linecap="round"/><line x1="13" y1="10" x2="16" y2="10" stroke="#C8F135" stroke-width="1.4" stroke-linecap="round"/><line x1="5.8" y1="5.8" x2="7.9" y2="7.9" stroke="#C8F135" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/><line x1="12.1" y1="12.1" x2="14.2" y2="14.2" stroke="#C8F135" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/></svg>
-        </div>
-        <h3 data-i18n="service.ai.title">IA para tu negocio</h3>
-        <p data-i18n="service.ai.desc">Integramos inteligencia artificial en tus sistemas para optimizar operaciones y subir las ventas de tus clientes.</p>
+      <div class="service-card reveal" data-delay="3">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FAAFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.4L12 15l-1.8-4.6L5.5 9l4.7-1.4z" stroke="#C8F135"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8zM5 16l.6 1.5 1.5.6-1.5.6L5 20.2l-.6-1.5-1.5-.6 1.5-.6z"/></svg></div>
+        <h3 data-i18n="service.4.t">IA aplicada</h3>
+        <p data-i18n="service.4.d">Lectura de comprobantes, clasificación de consultas, respuestas y resúmenes. La inteligencia artificial donde ahorra horas de verdad, no como adorno.</p>
+        <div class="ex" data-i18n-html="service.4.ex"><b>Ejemplo:</b> leer el comprobante que manda el cliente y registrar el pago solo.</div>
       </div>
     </div>
   </div>
@@ -392,76 +617,88 @@
 <!-- TRABAJOS -->
 <section id="work">
   <div class="inner">
-    <div class="section-label" data-i18n="work.label">Trabajos realizados</div>
-    <h2 data-i18n="work.h2">Proyectos que ya están funcionando.</h2>
+    <div class="section-head reveal">
+      <div>
+        <div class="section-label" data-i18n="work.label">Trabajos</div>
+        <h2 data-i18n="work.h2">Productos que ya están funcionando.</h2>
+      </div>
+      <p class="section-intro" data-i18n="work.intro">Para negocios y profesionales de Bariloche y de todo el país. Cada uno con su marca, su backoffice y gente real usándolo.</p>
+    </div>
     <div class="work-grid">
 
-      <div class="work-card">
-        <div class="work-preview work-preview-paola">
+      <article class="work-card reveal">
+        <div class="work-preview">
+          <span class="work-live" data-i18n="work.live">En producción</span>
+          <img src="work-bandurrias.jpg" alt="bandurriastrailrunning.com.ar" loading="lazy" width="1200" height="750">
+        </div>
+        <div class="work-info">
+          <div class="work-tags">
+            <span class="work-tag" data-i18n="tag.pwa">App instalable</span>
+            <span class="work-tag" data-i18n="tag.sessions">Turnos y cuotas</span>
+            <span class="work-tag" data-i18n="tag.shop">Tienda</span>
+            <span class="work-tag green" data-i18n="tag.wabot">Bot WhatsApp</span>
+          </div>
+          <h3>Bandurrias Trail Running</h3>
+          <div class="who" data-i18n="work.bandurrias.who">Equipo de trail running · Bariloche · más de 80 socios activos</div>
+          <p data-i18n="work.bandurrias.desc">Planificación semanal, inscripción a entrenamientos, cobro de cuotas, tienda del equipo, resultados de carreras y panel para el entrenador. Funciona sin señal en la montaña y avisa por WhatsApp.</p>
+          <a href="https://bandurriastrailrunning.com.ar" target="_blank" rel="noopener" class="work-link"><span data-i18n="work.visit">Ver sitio</span> ↗</a>
+        </div>
+      </article>
+
+      <article class="work-card reveal" data-delay="1">
+        <div class="work-preview">
+          <span class="work-live" data-i18n="work.live">En producción</span>
           <img src="work-paola.jpg" alt="paolanicola.com.ar" loading="lazy" width="1200" height="750">
         </div>
         <div class="work-info">
           <div class="work-tags">
-            <span class="work-tag">E-commerce</span>
-            <span class="work-tag" data-i18n="tag.appointments">Turnos online</span>
-            <span class="work-tag green">MercadoPago</span>
+            <span class="work-tag" data-i18n="tag.ecommerce">Tienda online</span>
+            <span class="work-tag" data-i18n="tag.appointments">Turnos</span>
+            <span class="work-tag green">Mercado Pago</span>
             <span class="work-tag">Backoffice</span>
           </div>
           <h3>Paola Nicola</h3>
-          <p data-i18n="work.paola.desc">Plataforma completa con sistema de turnos, gestión de pacientes, catálogo de productos con carrito de compras y pago integrado con MercadoPago. Panel de administración para carga y gestión del negocio.</p>
-          <a href="https://paolanicola.com.ar" target="_blank" class="work-link" data-i18n="work.visit">Ver sitio ↗</a>
+          <div class="who" data-i18n="work.paola.who">Nutricionista · consultorio y tienda</div>
+          <p data-i18n="work.paola.desc">Sistema de turnos, gestión de pacientes, catálogo con carrito y pago con Mercado Pago. Un panel para que ella cargue todo sin depender de nadie.</p>
+          <a href="https://paolanicola.com.ar" target="_blank" rel="noopener" class="work-link"><span data-i18n="work.visit">Ver sitio</span> ↗</a>
         </div>
-      </div>
+      </article>
 
-      <div class="work-card">
-        <div class="work-preview work-preview-poli">
+      <article class="work-card reveal">
+        <div class="work-preview">
+          <span class="work-live" data-i18n="work.live">En producción</span>
           <img src="work-poli.jpg" alt="poliautomotores.com.ar" loading="lazy" width="1200" height="750">
         </div>
         <div class="work-info">
           <div class="work-tags">
             <span class="work-tag" data-i18n="tag.catalog">Catálogo</span>
-            <span class="work-tag" data-i18n="tag.filters">Filtros avanzados</span>
-            <span class="work-tag green">Backoffice ABM</span>
+            <span class="work-tag" data-i18n="tag.filters">Filtros</span>
+            <span class="work-tag green">Backoffice</span>
           </div>
           <h3>Poli Automotores</h3>
-          <p data-i18n="work.poli.desc">Plataforma de venta de autos con frontend público y panel de administración. Los vendedores gestionan el stock desde el backoffice y los clientes filtran por marca, modelo y condición del vehículo.</p>
-          <a href="https://poliautomotores.com.ar" target="_blank" class="work-link" data-i18n="work.visit">Ver sitio ↗</a>
+          <div class="who" data-i18n="work.poli.who">Agencia de autos</div>
+          <p data-i18n="work.poli.desc">Catálogo público con filtros por marca, modelo y condición, y un panel donde los vendedores cargan y actualizan el stock en minutos.</p>
+          <a href="https://poliautomotores.com.ar" target="_blank" rel="noopener" class="work-link"><span data-i18n="work.visit">Ver sitio</span> ↗</a>
         </div>
-      </div>
+      </article>
 
-      <div class="work-card">
-        <div class="work-preview work-preview-bandurrias">
-          <img src="work-bandurrias.jpg" alt="bandurriastrailrunning.com.ar" loading="lazy" width="1200" height="750">
-        </div>
-        <div class="work-info">
-          <div class="work-tags">
-            <span class="work-tag" data-i18n="tag.pwa">App PWA</span>
-            <span class="work-tag" data-i18n="tag.sessions">Turnos y cuotas</span>
-            <span class="work-tag">Strava</span>
-            <span class="work-tag green" data-i18n="tag.wabot">Bot WhatsApp</span>
-          </div>
-          <h3>Bandurrias Trail Running</h3>
-          <p data-i18n="work.bandurrias.desc">Sitio público y app para el equipo de trail running. Planificación semanal, inscripción a entrenamientos, cobro de cuota, roles para entrenadores y miembros, integración con Strava y avisos por WhatsApp.</p>
-          <a href="https://bandurriastrailrunning.com.ar" target="_blank" class="work-link" data-i18n="work.visit">Ver sitio ↗</a>
-        </div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-preview work-preview-repuestos">
+      <article class="work-card reveal" data-delay="1">
+        <div class="work-preview">
+          <span class="work-live" data-i18n="work.mvp">Producto propio</span>
           <img src="work-repuestos.jpg" alt="repuestosaltoque.com.ar" loading="lazy" width="1200" height="750">
         </div>
         <div class="work-info">
           <div class="work-tags">
-            <span class="work-tag green" data-i18n="tag.own">Producto propio</span>
             <span class="work-tag">Marketplace</span>
             <span class="work-tag" data-i18n="tag.livequotes">Cotizaciones en vivo</span>
-            <span class="work-tag">MercadoPago</span>
+            <span class="work-tag green">Mercado Pago</span>
           </div>
           <h3>RepuestosAlToque</h3>
-          <p data-i18n="work.repuestos.desc">Marketplace de repuestos urgentes para Bariloche. El mecánico pide, las casas de repuestos cotizan en vivo, el pago se divide automáticamente y un backoffice administra usuarios, fletes y reputación.</p>
-          <a href="https://repuestosaltoque.com.ar" target="_blank" class="work-link" data-i18n="work.visit">Ver sitio ↗</a>
+          <div class="who" data-i18n="work.repuestos.who">Repuestos urgentes · Bariloche</div>
+          <p data-i18n="work.repuestos.desc">El mecánico pide, las casas de repuestos cotizan en una ventana de diez minutos, paga por Mercado Pago y un flete lo entrega. Reputación, anonimato y cuenta corriente incluidos.</p>
+          <a href="https://repuestosaltoque.com.ar" target="_blank" rel="noopener" class="work-link"><span data-i18n="work.visit">Ver sitio</span> ↗</a>
         </div>
-      </div>
+      </article>
 
     </div>
   </div>
@@ -470,65 +707,94 @@
 <!-- CÓMO TRABAJAMOS -->
 <section id="process">
   <div class="inner">
-    <div class="section-label" data-i18n="process.label">Cómo trabajamos</div>
-    <h2 data-i18n="process.h2">Tres pasos, sin sorpresas.</h2>
-    <p class="section-intro" data-i18n="process.intro">Sabés qué esperar en cada etapa antes de empezar.</p>
+    <div class="section-head reveal">
+      <div>
+        <div class="section-label" data-i18n="process.label">Cómo trabajamos</div>
+        <h2 data-i18n="process.h2">Ves tu app antes de decidir. Y la usás en dos semanas.</h2>
+      </div>
+      <p class="section-intro" data-i18n="process.intro">Sin reuniones eternas ni presupuestos de diez páginas. Sabés qué esperar en cada paso.</p>
+    </div>
     <div class="process-grid">
-      <div class="process-step">
-        <div class="step-num">01</div>
-        <h3 data-i18n="process.1.title">Charla inicial</h3>
-        <p data-i18n="process.1.desc">Nos contás cómo funciona tu negocio hoy y qué te está frenando. Sin costo y sin compromiso.</p>
+      <div class="process-step reveal">
+        <div class="step-num">1</div>
+        <h3 data-i18n="process.1.title">Una charla de 30 minutos</h3>
+        <p data-i18n="process.1.desc">Nos contás cómo trabajás hoy, qué hacés a mano y qué te está frenando. Por videollamada o en persona en Bariloche.</p>
+        <span class="when" data-i18n="process.1.when">Sin costo</span>
       </div>
-      <div class="process-step">
-        <div class="step-num">02</div>
-        <h3 data-i18n="process.2.title">Propuesta concreta</h3>
-        <p data-i18n="process.2.desc">Te devolvemos un plan con alcance, plazos y presupuesto. Vos decidís por dónde empezar.</p>
+      <div class="process-step reveal" data-delay="1">
+        <div class="step-num">2</div>
+        <h3 data-i18n="process.2.title">Propuesta con pantallas reales</h3>
+        <p data-i18n="process.2.desc">A los pocos días te mandamos por WhatsApp cómo se vería tu app, con el precio y las etapas. Ves el producto antes de pagar nada.</p>
+        <span class="when" data-i18n="process.2.when">En 2 o 3 días</span>
       </div>
-      <div class="process-step">
-        <div class="step-num">03</div>
-        <h3 data-i18n="process.3.title">Desarrollo y acompañamiento</h3>
-        <p data-i18n="process.3.desc">Avanzamos en etapas cortas para que veas el progreso y puedas ajustar en el camino. Después del lanzamiento seguimos cerca.</p>
+      <div class="process-step reveal" data-delay="2">
+        <div class="step-num">3</div>
+        <h3 data-i18n="process.3.title">Primera etapa funcionando</h3>
+        <p data-i18n="process.3.desc">Arrancamos por lo que más te duele. Cargamos tus datos, lo probamos con vos y sale a producción con tus clientes reales.</p>
+        <span class="when" data-i18n="process.3.when">En 2 semanas</span>
       </div>
+      <div class="process-step reveal" data-delay="3">
+        <div class="step-num">4</div>
+        <h3 data-i18n="process.4.title">Abono mensual y mejoras</h3>
+        <p data-i18n="process.4.desc">Pagás por mes, activamos el resto por partes cuando lo básico ya anda, y seguimos cerca para ajustar lo que haga falta.</p>
+        <span class="when" data-i18n="process.4.when">Cada mes</span>
+      </div>
+    </div>
+
+    <div class="terms reveal">
+      <div>
+        <h3 data-i18n="terms.h3">Condiciones claras desde el primer día.</h3>
+        <p data-i18n="terms.p">Pensado para que una pyme o un profesional independiente lo pueda afrontar sin riesgo.</p>
+      </div>
+      <ul class="terms-list">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8F135" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b data-i18n="terms.1.t">Sin costo inicial</b><span data-i18n="terms.1.d">La carga de tus datos y la puesta en marcha van incluidas.</span></div></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8F135" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b data-i18n="terms.2.t">Sin permanencia</b><span data-i18n="terms.2.d">Si deja de servirte, lo cortás. Tus datos se exportan y son tuyos.</span></div></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8F135" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b data-i18n="terms.3.t">Precio fijo por 12 meses</b><span data-i18n="terms.3.d">El abono de lanzamiento no se mueve durante el primer año.</span></div></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8F135" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b data-i18n="terms.4.t">Por etapas</b><span data-i18n="terms.4.d">Cada etapa funciona sola. Sumás la siguiente cuando quieras.</span></div></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- CALENDARIO / CONTACTO -->
-<section id="calendar">
+<!-- CONTACTO -->
+<section id="contact">
   <div class="inner">
-    <div class="calendar-grid">
-      <div class="cal-info">
-        <div class="section-label" data-i18n="cal.label">Agendá una consulta</div>
-        <h3 data-i18n="cal.h3">¿Cuándo hablamos?</h3>
-        <p data-i18n="cal.p">Elegí el día que te quede cómodo y coordinamos el horario por WhatsApp. La primera consulta es sin costo y sin compromiso.</p>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="section-label" data-i18n="cal.label">Contacto</div>
+        <h2 data-i18n="cal.h3">¿Cuándo hablamos?</h2>
+        <p data-i18n="cal.p">Elegí el día que te quede cómodo en el calendario y coordinamos el horario por WhatsApp. O escribinos directo: contestamos en el día.</p>
         <div class="contact-options">
-          <a id="wa-btn" href="https://wa.me/5492215751595?text=Hola!%20Me%20interesa%20agendar%20una%20consulta%20con%20Sistemik." target="_blank" class="contact-btn wa">
+          <a id="wa-btn" href="#" target="_blank" rel="noopener" class="contact-btn wa" data-wa>
             <div class="contact-btn-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.855L.057 23.716a.5.5 0 00.609.61l5.919-1.463A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.002-1.368l-.36-.214-3.713.918.952-3.629-.235-.373A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.855L.057 23.716a.5.5 0 00.609.61l5.919-1.463A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.002-1.368l-.36-.214-3.713.918.952-3.629-.235-.373A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
             </div>
-            <div>
-              <span class="contact-btn-label" data-i18n="wa.sublabel">Escribinos por</span>
-              WhatsApp
-            </div>
+            <div><span class="contact-btn-label" data-i18n="wa.sublabel">Escribinos por</span>WhatsApp</div>
+            <span class="arrow">→</span>
           </a>
-          <a href="https://instagram.com/sistemik.ar" target="_blank" class="contact-btn ig">
+          <a href="https://instagram.com/sistemik.ar" target="_blank" rel="noopener" class="contact-btn ig">
             <div class="contact-btn-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="#E1306C" stroke="none"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="1.8" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="#E1306C" stroke="none"/></svg>
             </div>
-            <div>
-              <span class="contact-btn-label" data-i18n="ig.sublabel">Seguinos y escribinos en</span>
-              @sistemik.ar
+            <div><span class="contact-btn-label" data-i18n="ig.sublabel">Seguinos en</span>@sistemik.ar</div>
+            <span class="arrow">→</span>
+          </a>
+          <a id="mail-btn" href="mailto:consultas@sistemik.com.ar" class="contact-btn mail">
+            <div class="contact-btn-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7FAAFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 8l9 6 9-6"/></svg>
             </div>
+            <div><span class="contact-btn-label" data-i18n="mail.sublabel">O por mail a</span>consultas@sistemik.com.ar</div>
+            <span class="arrow">→</span>
           </a>
         </div>
       </div>
 
-      <div class="cal-wrap">
+      <div class="cal-wrap reveal" data-delay="1">
         <div class="cal-header">
           <h3 id="cal-title"></h3>
           <div class="cal-nav">
-            <button class="cal-btn" onclick="changeMonth(-1)">‹</button>
-            <button class="cal-btn" onclick="changeMonth(1)">›</button>
+            <button class="cal-btn" onclick="changeMonth(-1)" aria-label="Mes anterior">‹</button>
+            <button class="cal-btn" onclick="changeMonth(1)" aria-label="Mes siguiente">›</button>
           </div>
         </div>
         <div class="cal-days-header" id="cal-days-header"></div>
@@ -537,10 +803,8 @@
           <div class="legend-item"><div class="legend-dot" style="background:var(--lime)"></div><span data-i18n="legend.available">Disponible</span></div>
           <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div><span data-i18n="legend.today">Hoy</span></div>
         </div>
-        <a id="cal-wa-link" href="#" target="_blank">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.855L.057 23.716a.5.5 0 00.609.61l5.919-1.463A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.002-1.368l-.36-.214-3.713.918.952-3.629-.235-.373A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
-          <span data-i18n="cal.link">Hablemos →</span>
-        </a>
+        <a id="cal-wa-link" href="#" target="_blank" rel="noopener" class="btn btn-wa"><span data-i18n="cal.link">Confirmar por WhatsApp →</span></a>
+        <p class="cal-hint" data-i18n="cal.hint">Lunes a viernes. La primera charla es sin costo y sin compromiso.</p>
       </div>
     </div>
   </div>
@@ -548,23 +812,46 @@
 
 <!-- FOOTER -->
 <footer>
-  <div style="display:flex;align-items:center;gap:10px;">
-    <svg width="22" height="22" viewBox="0 0 36 36" fill="none">
-      <line x1="4" y1="18" x2="32" y2="18" stroke="#1A6BFF" stroke-width="1.5" opacity="0.5"/>
-      <line x1="10" y1="6" x2="26" y2="30" stroke="#C8F135" stroke-width="2"/>
-      <circle cx="10" cy="6" r="3" fill="#1A6BFF"/>
-      <circle cx="26" cy="6" r="3" fill="#1A6BFF"/>
-      <circle cx="4" cy="18" r="3" fill="#1A6BFF"/>
-      <circle cx="26" cy="30" r="3" fill="#1A6BFF"/>
-      <circle cx="10" cy="30" r="3" fill="#1A6BFF"/>
-      <circle cx="32" cy="18" r="3.5" fill="#C8F135"/>
-    </svg>
-    <span style="font-family:'Geist',sans-serif;font-weight:800;font-size:1rem;letter-spacing:-0.03em;">sistemik</span>
+  <div class="inner">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#home" class="logo-wrap" aria-label="Sistemik">
+          <svg width="24" height="24" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <line x1="4" y1="18" x2="32" y2="18" stroke="#1A6BFF" stroke-width="1.5" opacity="0.5"/>
+            <line x1="10" y1="6" x2="26" y2="30" stroke="#C8F135" stroke-width="2"/>
+            <circle cx="10" cy="6" r="3" fill="#1A6BFF"/><circle cx="26" cy="6" r="3" fill="#1A6BFF"/>
+            <circle cx="4" cy="18" r="3" fill="#1A6BFF"/><circle cx="26" cy="30" r="3" fill="#1A6BFF"/>
+            <circle cx="10" cy="30" r="3" fill="#1A6BFF"/><circle cx="32" cy="18" r="3.5" fill="#C8F135"/>
+          </svg>
+          <span class="logo-name">sistemi<span>k</span></span>
+        </a>
+        <p data-i18n="foot.tagline">Consultora de sistemas para pymes y profesionales. Apps, bots de WhatsApp y productos por abono mensual, desde San Carlos de Bariloche para todo el país.</p>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="foot.nav">Sitio</h4>
+        <a href="#estudio" data-i18n="nav.estudio">Estudio</a>
+        <a href="#services" data-i18n="nav.services">Servicios</a>
+        <a href="#work" data-i18n="nav.work">Trabajos</a>
+        <a href="#process" data-i18n="nav.process">Cómo trabajamos</a>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="foot.contact">Contacto</h4>
+        <a href="#" data-wa>WhatsApp</a>
+        <a href="https://instagram.com/sistemik.ar" target="_blank" rel="noopener">Instagram</a>
+        <a id="footer-email" href="mailto:consultas@sistemik.com.ar">consultas@sistemik.com.ar</a>
+        <a href="/privacidad" data-i18n="foot.privacy">Política de privacidad</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Sistemik · San Carlos de Bariloche, Argentina</span>
+      <span data-i18n="foot.made">Hecho en la Patagonia, con clientes en todo el país.</span>
+    </div>
   </div>
-  <p>© <span id="year">2026</span> · Bariloche, Argentina · <a id="footer-email" href="mailto:consultas@sistemik.com.ar" style="color:inherit;text-decoration:none;">consultas@sistemik.com.ar</a></p>
 </footer>
 
 <script>
+  document.documentElement.classList.replace('no-js', 'js');
+
   // =============================================
   // CONFIGURACIÓN
   // =============================================
@@ -573,88 +860,162 @@
 
   const T = {
     es: {
-      'nav.services': 'Servicios', 'nav.work': 'Trabajos', 'nav.process': 'Proceso', 'nav.calendar': 'Agenda', 'nav.cta': 'Hablemos →',
-      'hero.h1': 'Tecnología que<br><em>ordena</em> y hace<br>crecer tu negocio.',
-      'hero.sub': 'Sistemik es la consultora de sistemas para pymes. Diseño, desarrollo e inteligencia artificial para que tu negocio venda más, trabaje menos y escale de verdad.',
-      'hero.cta': 'Agendá una consulta →', 'hero.secondary': 'Ver trabajos',
-      'hero.proof': 'Plataformas en producción para salud, automotor, deporte y e-commerce.',
-      'services.label': 'Qué hacemos', 'services.h2': 'Servicios que mueven el negocio.',
-      'service.web.title': 'Desarrollo Web & Apps', 'service.web.desc': 'Sitios y plataformas a medida con frontend público, backoffice y todo lo que tu operación necesite.',
-      'service.consulting.title': 'Consultoría Digital', 'service.consulting.desc': 'Analizamos tu negocio y trazamos una hoja de ruta digital clara, ejecutable y con resultados medibles.',
-      'service.saas.title': 'Productos SaaS', 'service.saas.desc': 'Herramientas de software con membresía que automatizan procesos y generan ingresos recurrentes.',
-      'service.ai.title': 'IA para tu negocio', 'service.ai.desc': 'Integramos inteligencia artificial en tus sistemas para optimizar operaciones y subir las ventas de tus clientes.',
-      'ai.badge': 'Nuevo',
-      'work.label': 'Trabajos realizados', 'work.h2': 'Proyectos que ya están funcionando.',
-      'work.paola.desc': 'Plataforma completa con sistema de turnos, gestión de pacientes, catálogo de productos con carrito de compras y pago integrado con MercadoPago. Panel de administración para carga y gestión del negocio.',
-      'work.poli.desc': 'Plataforma de venta de autos con frontend público y panel de administración. Los vendedores gestionan el stock desde el backoffice y los clientes filtran por marca, modelo y condición del vehículo.',
-      'work.visit': 'Ver sitio ↗',
-      'tag.appointments': 'Turnos online', 'tag.catalog': 'Catálogo', 'tag.filters': 'Filtros avanzados',
-      'tag.pwa': 'App PWA', 'tag.sessions': 'Turnos y cuotas', 'tag.wabot': 'Bot WhatsApp', 'tag.own': 'Producto propio', 'tag.livequotes': 'Cotizaciones en vivo',
-      'work.bandurrias.desc': 'Sitio público y app para el equipo de trail running. Planificación semanal, inscripción a entrenamientos, cobro de cuota, roles para entrenadores y miembros, integración con Strava y avisos por WhatsApp.',
-      'work.repuestos.desc': 'Marketplace de repuestos urgentes para Bariloche. El mecánico pide, las casas de repuestos cotizan en vivo, el pago se divide automáticamente y un backoffice administra usuarios, fletes y reputación.',
-      'process.label': 'Cómo trabajamos', 'process.h2': 'Tres pasos, sin sorpresas.',
-      'process.intro': 'Sabés qué esperar en cada etapa antes de empezar.',
-      'process.1.title': 'Charla inicial', 'process.1.desc': 'Nos contás cómo funciona tu negocio hoy y qué te está frenando. Sin costo y sin compromiso.',
-      'process.2.title': 'Propuesta concreta', 'process.2.desc': 'Te devolvemos un plan con alcance, plazos y presupuesto. Vos decidís por dónde empezar.',
-      'process.3.title': 'Desarrollo y acompañamiento', 'process.3.desc': 'Avanzamos en etapas cortas para que veas el progreso y puedas ajustar en el camino. Después del lanzamiento seguimos cerca.',
-      'cal.label': 'Agendá una consulta', 'cal.h3': '¿Cuándo hablamos?',
-      'cal.p': 'Elegí el día que te quede cómodo y coordinamos el horario por WhatsApp. La primera consulta es sin costo y sin compromiso.',
-      'wa.sublabel': 'Escribinos por', 'ig.sublabel': 'Seguinos y escribinos en',
+      'nav.estudio': 'Estudio', 'nav.services': 'Servicios', 'nav.work': 'Trabajos', 'nav.process': 'Cómo trabajamos', 'nav.contact': 'Contacto',
+      'nav.cta': 'Hablemos', 'nav.cta.long': 'Hablemos por WhatsApp',
+      'hero.eyebrow': 'Consultora de sistemas · San Carlos de Bariloche',
+      'hero.h1': 'Sistemas que <em>trabajan solos</em> para tu negocio.',
+      'hero.sub': 'Apps, bots de WhatsApp y herramientas internas para pymes y profesionales. <strong>Sin costo inicial</strong>, por un abono mensual, y en producción en semanas.',
+      'hero.cta': 'Hablemos por WhatsApp', 'hero.secondary': 'Conocé Estudio ↓',
+      'hero.proof': 'En producción para:',
+      'proof.1': 'Estudios contables', 'proof.2': 'Salud', 'proof.3': 'Automotor', 'proof.4': 'Deporte', 'proof.5': 'Comercio',
+      'ph.hello': 'Hola, Estudio Lagos', 'ph.date': 'Miércoles 21 de octubre', 'ph.fees': 'Honorarios de octubre', 'ph.clients': '8 clientes activos', 'ph.due': 'vencen el 10',
+      'ph.next': 'Próximos vencimientos', 'ph.today': 'Hoy', 'ph.tomorrow': 'Mañana', 'ph.fees2': 'Honorarios', 'ph.clients2': '8 clientes', 'ph.days': '20 días',
+      'ph.auto': 'Envíos automáticos', 'ph.rem1': 'Recordatorio Monotributo', 'ph.rem1.sub': 'Enviado 19/10 · 4 clientes · WhatsApp', 'ph.rem2': 'Recordatorio IVA', 'ph.rem2.sub': 'Sale hoy 18:00 · 2 clientes',
+      'ph.nav1': 'Inicio', 'ph.nav2': 'Clientes', 'ph.nav3': 'Envíos', 'ph.nav4': 'Cobranza',
+      'fl.sub': 'Mensaje a Martín · Panadería El Ñire',
+      'fl.msg': 'Hola Martín, tus vencimientos de octubre: <b>Honorarios · $ 70.000 · 10/10</b> · Monotributo · 20/10. Transferí al alias <b>lagos.estudio</b> y mandame el comprobante por acá.',
+      'fl.sent': '24 avisos enviados hoy',
+      'stat.1': 'de costo inicial. La carga de tus datos la hacemos nosotros.',
+      'stat.2.unit': 'sem.', 'stat.2': 'hasta la primera etapa funcionando con tus clientes reales.',
+      'stat.3': 'personas usan una de nuestras apps todas las semanas.',
+      'stat.4': 'avisos automáticos por WhatsApp y mail, con la API oficial de Meta.',
+      'estudio.label': 'Producto · Para estudios contables',
+      'estudio.h2': 'Tus clientes reciben sus vencimientos y <em>pagan a tiempo</em>, sin que armes un solo mensaje.',
+      'estudio.intro': 'Estudio es la app de Sistemik para contadores. Cargamos tus clientes con su CUIT y sus honorarios, y la herramienta hace el resto desde tu propio número de WhatsApp.',
+      'feat.1.t': 'El 1° de cada mes, el aviso', 'feat.1.d': 'A cada cliente le llega lo que le vence ese mes y cuánto te tiene que pagar. Por WhatsApp o por mail, según el cliente.',
+      'feat.2.t': 'El día antes, el recordatorio', 'feat.2.d': 'Un mensaje corto antes de cada vencimiento de ARCA, Ingresos Brutos u honorarios. Menos clientes colgados, menos reclamos.',
+      'feat.3.t': 'El comprobante, registrado', 'feat.3.d': 'Cuando te pagan, mandan el comprobante por el mismo chat y te queda anotado quién pagó, cuánto y cuándo. Lo ves desde el celu.',
+      'feat.4.t': 'Tu estudio, tu marca', 'feat.4.d': 'Textos, logo y colores propios. Si un cliente responde con una consulta, el bot se la deriva a tu WhatsApp.',
+      'pill.live': 'En producción', 'pill.1': 'Abono mensual', 'pill.2': 'Sin costo inicial', 'pill.3': 'Sin permanencia', 'pill.4': 'Carga inicial incluida',
+      'estudio.cta': 'Quiero verlo en mi estudio',
+      'wa.biz': 'Cuenta de empresa', 'wa.d1': '1 de octubre', 'wa.d2': '9 de octubre', 'wa.d3': '10 de octubre', 'wa.input': 'Mensaje',
+      'wa.m1': 'Hola Martín, tus vencimientos de octubre:<br>• Honorarios · $ 70.000 · <b>10/10</b><br>• Monotributo · <b>20/10</b><br>Transferí al alias <b>lagos.estudio</b> y mandame el comprobante por acá.<div class="by">Estudio Lagos · Bariloche</div><div class="tm">09:00</div>',
+      'wa.m2': 'Recordatorio: mañana <b>10/10</b> vencen los honorarios de octubre, $ 70.000. Alias <b>lagos.estudio</b>.<div class="tm">18:00</div>',
+      'wa.m3': '<div class="wa-file">comprobante.jpg</div>Listo, te transferí<div class="tm">11:32 <i>✓✓</i></div>',
+      'wa.m4': '✅ Recibido, Martín. Registré tu pago de octubre por $ 70.000. El estudio lo confirma cuando lo vea acreditado.<div class="tm">11:32</div>',
+      'services.label': 'Qué hacemos', 'services.h2': 'Lo que tu negocio necesita, sin pagar de más.',
+      'services.intro': 'Resolvemos primero lo que más te duele, rápido, y después sumamos el resto por etapas.',
+      'service.1.t': 'Apps y plataformas a medida', 'service.1.d': 'Sitios, portales y paneles de administración construidos para cómo trabaja tu negocio. Se usan desde el celular y se instalan como una app, sin pasar por las tiendas.', 'service.1.ex': '<b>Ejemplo:</b> turnos, cuotas y tienda del equipo Bandurrias.',
+      'badge.hot': 'Lo más pedido',
+      'service.2.t': 'Bots de WhatsApp', 'service.2.d': 'Avisos, recordatorios y respuestas automáticas desde tu propio número, con la API oficial de Meta. Tu cliente recibe lo que necesita y vos dejás de armar mensajes a mano.', 'service.2.ex': '<b>Ejemplo:</b> los avisos de vencimientos y cobranza de Estudio.',
+      'service.3.t': 'Productos por abono', 'service.3.d': 'Herramientas ya construidas para tu rubro que se activan por partes y se adaptan a tu marca. Pagás un mensual bajo, sin inversión inicial ni permanencia.', 'service.3.ex': '<b>Ejemplo:</b> Estudio, para estudios contables.',
+      'service.4.t': 'IA aplicada', 'service.4.d': 'Lectura de comprobantes, clasificación de consultas, respuestas y resúmenes. La inteligencia artificial donde ahorra horas de verdad, no como adorno.', 'service.4.ex': '<b>Ejemplo:</b> leer el comprobante que manda el cliente y registrar el pago solo.',
+      'work.label': 'Trabajos', 'work.h2': 'Productos que ya están funcionando.',
+      'work.intro': 'Para negocios y profesionales de Bariloche y de todo el país. Cada uno con su marca, su backoffice y gente real usándolo.',
+      'work.live': 'En producción', 'work.mvp': 'Producto propio', 'work.visit': 'Ver sitio',
+      'tag.pwa': 'App instalable', 'tag.sessions': 'Turnos y cuotas', 'tag.shop': 'Tienda', 'tag.wabot': 'Bot WhatsApp',
+      'tag.ecommerce': 'Tienda online', 'tag.appointments': 'Turnos', 'tag.catalog': 'Catálogo', 'tag.filters': 'Filtros', 'tag.livequotes': 'Cotizaciones en vivo',
+      'work.bandurrias.who': 'Equipo de trail running · Bariloche · más de 80 socios activos',
+      'work.bandurrias.desc': 'Planificación semanal, inscripción a entrenamientos, cobro de cuotas, tienda del equipo, resultados de carreras y panel para el entrenador. Funciona sin señal en la montaña y avisa por WhatsApp.',
+      'work.paola.who': 'Nutricionista · consultorio y tienda',
+      'work.paola.desc': 'Sistema de turnos, gestión de pacientes, catálogo con carrito y pago con Mercado Pago. Un panel para que ella cargue todo sin depender de nadie.',
+      'work.poli.who': 'Agencia de autos',
+      'work.poli.desc': 'Catálogo público con filtros por marca, modelo y condición, y un panel donde los vendedores cargan y actualizan el stock en minutos.',
+      'work.repuestos.who': 'Repuestos urgentes · Bariloche',
+      'work.repuestos.desc': 'El mecánico pide, las casas de repuestos cotizan en una ventana de diez minutos, paga por Mercado Pago y un flete lo entrega. Reputación, anonimato y cuenta corriente incluidos.',
+      'process.label': 'Cómo trabajamos', 'process.h2': 'Ves tu app antes de decidir. Y la usás en dos semanas.',
+      'process.intro': 'Sin reuniones eternas ni presupuestos de diez páginas. Sabés qué esperar en cada paso.',
+      'process.1.title': 'Una charla de 30 minutos', 'process.1.desc': 'Nos contás cómo trabajás hoy, qué hacés a mano y qué te está frenando. Por videollamada o en persona en Bariloche.', 'process.1.when': 'Sin costo',
+      'process.2.title': 'Propuesta con pantallas reales', 'process.2.desc': 'A los pocos días te mandamos por WhatsApp cómo se vería tu app, con el precio y las etapas. Ves el producto antes de pagar nada.', 'process.2.when': 'En 2 o 3 días',
+      'process.3.title': 'Primera etapa funcionando', 'process.3.desc': 'Arrancamos por lo que más te duele. Cargamos tus datos, lo probamos con vos y sale a producción con tus clientes reales.', 'process.3.when': 'En 2 semanas',
+      'process.4.title': 'Abono mensual y mejoras', 'process.4.desc': 'Pagás por mes, activamos el resto por partes cuando lo básico ya anda, y seguimos cerca para ajustar lo que haga falta.', 'process.4.when': 'Cada mes',
+      'terms.h3': 'Condiciones claras desde el primer día.', 'terms.p': 'Pensado para que una pyme o un profesional independiente lo pueda afrontar sin riesgo.',
+      'terms.1.t': 'Sin costo inicial', 'terms.1.d': 'La carga de tus datos y la puesta en marcha van incluidas.',
+      'terms.2.t': 'Sin permanencia', 'terms.2.d': 'Si deja de servirte, lo cortás. Tus datos se exportan y son tuyos.',
+      'terms.3.t': 'Precio fijo por 12 meses', 'terms.3.d': 'El abono de lanzamiento no se mueve durante el primer año.',
+      'terms.4.t': 'Por etapas', 'terms.4.d': 'Cada etapa funciona sola. Sumás la siguiente cuando quieras.',
+      'cal.label': 'Contacto', 'cal.h3': '¿Cuándo hablamos?',
+      'cal.p': 'Elegí el día que te quede cómodo en el calendario y coordinamos el horario por WhatsApp. O escribinos directo: contestamos en el día.',
+      'wa.sublabel': 'Escribinos por', 'ig.sublabel': 'Seguinos en', 'mail.sublabel': 'O por mail a',
       'legend.available': 'Disponible', 'legend.today': 'Hoy',
-      'cal.link': 'Hablemos →',
-      'wa.msg': 'Hola! Me interesa agendar una consulta con Sistemik para el',
-      'wa.msg.nodate': 'Hola! Me interesa agendar una consulta con Sistemik.',
+      'cal.link': 'Confirmar por WhatsApp →', 'cal.hint': 'Lunes a viernes. La primera charla es sin costo y sin compromiso.',
+      'wa.msg': 'Hola! Me interesa agendar una charla con Sistemik para el',
+      'wa.msg.nodate': 'Hola! Me interesa agendar una charla con Sistemik.',
+      'wa.msg.estudio': 'Hola! Quiero ver cómo funcionaría Estudio en mi estudio contable.',
       'mail.subject': 'Consulta desde sistemik.com.ar',
-      'mail.address': 'consultas@sistemik.com.ar',
-      'dash.title': 'Panel de Ventas', 'dash.subtitle': 'con IA · Tiempo real', 'dash.live': 'En vivo',
-      'kpi.1.label': 'Ventas hoy', 'kpi.2.label': 'Conversión', 'kpi.3.label': 'Ticket prom.',
-      'chart.label': 'Ventas últimos 7 días',
-      'chart.days': ['Lu','Ma','Mi','Ju','Vi','Sa','Hoy'],
-      'ai.insight.title': 'Insight de IA',
-      'ai.insight.text': 'Los jueves convertís 2.4x más. Activar campaña automática puede sumar $48.000 esta semana.',
+      'foot.tagline': 'Consultora de sistemas para pymes y profesionales. Apps, bots de WhatsApp y productos por abono mensual, desde San Carlos de Bariloche para todo el país.',
+      'foot.nav': 'Sitio', 'foot.contact': 'Contacto', 'foot.privacy': 'Política de privacidad',
+      'foot.made': 'Hecho en la Patagonia, con clientes en todo el país.',
       'cal.days': ['Do','Lu','Ma','Mi','Ju','Vi','Sa'],
-      'cal.months': ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+      'cal.months': ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'],
     },
     en: {
-      'nav.services': 'Services', 'nav.work': 'Work', 'nav.process': 'Process', 'nav.calendar': 'Schedule', 'nav.cta': "Let's talk →",
-      'hero.h1': 'Technology that brings <em>order</em> to your business and helps it grow.',
-      'hero.sub': 'Sistemik is the tech partner for small businesses. Design, development and AI so your business sells more, works less and truly scales.',
-      'hero.cta': 'Book a consultation →', 'hero.secondary': 'See our work',
-      'hero.proof': 'Platforms in production for healthcare, automotive, sports and e-commerce.',
-      'services.label': 'What we do', 'services.h2': 'Services that move the needle.',
-      'service.web.title': 'Web Development & Apps', 'service.web.desc': 'Custom sites and platforms with public frontend, backoffice and everything your operation needs.',
-      'service.consulting.title': 'Digital Consulting', 'service.consulting.desc': 'We analyze your business and chart a clear, actionable digital roadmap with measurable results.',
-      'service.saas.title': 'SaaS Products', 'service.saas.desc': 'Subscription software tools that automate processes and generate recurring revenue.',
-      'service.ai.title': 'AI for your business', 'service.ai.desc': "We integrate artificial intelligence into your systems to optimize operations and boost your clients' sales.",
-      'ai.badge': 'New',
-      'work.label': 'Our work', 'work.h2': 'Projects already live and running.',
-      'work.paola.desc': 'Full platform with appointment system, patient management, product catalog with shopping cart and integrated MercadoPago payments. Admin panel for content and business management.',
-      'work.poli.desc': 'Car sales platform with public frontend and admin panel. Sellers manage inventory from the backoffice while customers filter by brand, model and vehicle condition.',
-      'work.visit': 'Visit site ↗',
-      'tag.appointments': 'Online appointments', 'tag.catalog': 'Catalog', 'tag.filters': 'Advanced filters',
-      'tag.pwa': 'PWA app', 'tag.sessions': 'Sessions & dues', 'tag.wabot': 'WhatsApp bot', 'tag.own': 'Own product', 'tag.livequotes': 'Live quotes',
-      'work.bandurrias.desc': 'Public site and app for the trail running team. Weekly planning, session sign-ups, membership payments, coach and member roles, Strava integration and WhatsApp reminders.',
-      'work.repuestos.desc': 'Urgent auto-parts marketplace for Bariloche. Mechanics post a request, parts shops quote live, payments are split automatically and a backoffice manages users, freight and reputation.',
-      'process.label': 'How we work', 'process.h2': 'Three steps, no surprises.',
-      'process.intro': 'You know what to expect at every stage before we start.',
-      'process.1.title': 'Intro call', 'process.1.desc': 'You tell us how your business runs today and what is holding it back. Free, no commitment.',
-      'process.2.title': 'Clear proposal', 'process.2.desc': 'We come back with a plan covering scope, timeline and budget. You decide where to start.',
-      'process.3.title': 'Build and follow-through', 'process.3.desc': 'We work in short stages so you see progress and can adjust along the way. After launch, we stay close.',
-      'cal.label': 'Book a consultation', 'cal.h3': 'When should we talk?',
-      'cal.p': "Pick a day that works for you and we'll sort out the time on WhatsApp. The first consultation is free, no strings attached.",
-      'wa.sublabel': 'Message us on', 'ig.sublabel': 'Follow and message us on',
+      'nav.estudio': 'Estudio', 'nav.services': 'Services', 'nav.work': 'Work', 'nav.process': 'How we work', 'nav.contact': 'Contact',
+      'nav.cta': "Let's talk", 'nav.cta.long': 'Chat on WhatsApp',
+      'hero.eyebrow': 'Software consultancy · Bariloche, Argentina',
+      'hero.h1': 'Systems that <em>run on their own</em> for your business.',
+      'hero.sub': 'Apps, WhatsApp bots and internal tools for small businesses and professionals. <strong>No upfront cost</strong>, a flat monthly fee, live in weeks.',
+      'hero.cta': 'Chat on WhatsApp', 'hero.secondary': 'Meet Estudio ↓',
+      'hero.proof': 'Live in production for:',
+      'proof.1': 'Accounting firms', 'proof.2': 'Healthcare', 'proof.3': 'Automotive', 'proof.4': 'Sports', 'proof.5': 'Retail',
+      'ph.hello': 'Hi, Lagos Accounting', 'ph.date': 'Wednesday, October 21', 'ph.fees': 'October fees', 'ph.clients': '8 active clients', 'ph.due': 'due on the 10th',
+      'ph.next': 'Upcoming deadlines', 'ph.today': 'Today', 'ph.tomorrow': 'Tomorrow', 'ph.fees2': 'Fees', 'ph.clients2': '8 clients', 'ph.days': '20 days',
+      'ph.auto': 'Automatic sends', 'ph.rem1': 'Tax reminder', 'ph.rem1.sub': 'Sent 10/19 · 4 clients · WhatsApp', 'ph.rem2': 'VAT reminder', 'ph.rem2.sub': 'Goes out today 6 pm · 2 clients',
+      'ph.nav1': 'Home', 'ph.nav2': 'Clients', 'ph.nav3': 'Sends', 'ph.nav4': 'Billing',
+      'fl.sub': 'Message to Martín · El Ñire Bakery',
+      'fl.msg': 'Hi Martín, your October deadlines: <b>Fees · $70,000 · 10/10</b> · Tax · 10/20. Transfer to alias <b>lagos.estudio</b> and send the receipt here.',
+      'fl.sent': '24 notices sent today',
+      'stat.1': 'upfront cost. We load your data for you.',
+      'stat.2.unit': 'wks', 'stat.2': 'until the first stage is live with your real clients.',
+      'stat.3': 'people use one of our apps every week.',
+      'stat.4': 'automatic notices via WhatsApp and email, on the official Meta API.',
+      'estudio.label': 'Product · For accounting firms',
+      'estudio.h2': 'Your clients get their deadlines and <em>pay on time</em>, without you writing a single message.',
+      'estudio.intro': "Estudio is Sistemik's app for accountants. We load your clients with their tax ID and fees, and the tool does the rest from your own WhatsApp number.",
+      'feat.1.t': 'On the 1st, the monthly notice', 'feat.1.d': "Each client gets what's due that month and how much they owe you. By WhatsApp or email, per client.",
+      'feat.2.t': 'The day before, a reminder', 'feat.2.d': 'A short message before every tax or fee deadline. Fewer late clients, fewer chasing calls.',
+      'feat.3.t': 'The receipt, on record', 'feat.3.d': 'When they pay, they send the receipt in the same chat and you get who paid, how much and when. From your phone.',
+      'feat.4.t': 'Your firm, your brand', 'feat.4.d': 'Your own wording, logo and colors. If a client replies with a question, the bot hands it to your WhatsApp.',
+      'pill.live': 'In production', 'pill.1': 'Monthly fee', 'pill.2': 'No upfront cost', 'pill.3': 'No lock-in', 'pill.4': 'Data setup included',
+      'estudio.cta': 'Show me Estudio for my firm',
+      'wa.biz': 'Business account', 'wa.d1': 'October 1', 'wa.d2': 'October 9', 'wa.d3': 'October 10', 'wa.input': 'Message',
+      'wa.m1': 'Hi Martín, your October deadlines:<br>• Fees · $70,000 · <b>10/10</b><br>• Tax · <b>10/20</b><br>Transfer to alias <b>lagos.estudio</b> and send the receipt here.<div class="by">Lagos Accounting · Bariloche</div><div class="tm">09:00</div>',
+      'wa.m2': 'Reminder: tomorrow <b>10/10</b> your October fees are due, $70,000. Alias <b>lagos.estudio</b>.<div class="tm">18:00</div>',
+      'wa.m3': '<div class="wa-file">receipt.jpg</div>Done, transferred<div class="tm">11:32 <i>✓✓</i></div>',
+      'wa.m4': '✅ Got it, Martín. Your October payment of $70,000 is recorded. The firm will confirm once it clears.<div class="tm">11:32</div>',
+      'services.label': 'What we do', 'services.h2': 'What your business needs, without overpaying.',
+      'services.intro': 'We solve what hurts most first, fast, and add the rest in stages.',
+      'service.1.t': 'Custom apps and platforms', 'service.1.d': 'Sites, portals and admin panels built around how your business actually works. Used from the phone and installed like an app, no app store needed.', 'service.1.ex': '<b>Example:</b> sessions, dues and shop for the Bandurrias team.',
+      'badge.hot': 'Most requested',
+      'service.2.t': 'WhatsApp bots', 'service.2.d': 'Notices, reminders and automatic replies from your own number, on the official Meta API. Your client gets what they need and you stop writing messages by hand.', 'service.2.ex': "<b>Example:</b> Estudio's deadline and billing notices.",
+      'service.3.t': 'Subscription products', 'service.3.d': 'Ready-made tools for your industry, switched on in stages and dressed in your brand. A low monthly fee, no upfront investment, no lock-in.', 'service.3.ex': '<b>Example:</b> Estudio, for accounting firms.',
+      'service.4.t': 'Applied AI', 'service.4.d': 'Reading receipts, sorting inquiries, drafting replies and summaries. AI where it truly saves hours, not as decoration.', 'service.4.ex': '<b>Example:</b> reading the receipt a client sends and recording the payment automatically.',
+      'work.label': 'Work', 'work.h2': 'Products already live and running.',
+      'work.intro': 'For businesses and professionals in Bariloche and across Argentina. Each with its own brand, its own backoffice and real people using it.',
+      'work.live': 'In production', 'work.mvp': 'Own product', 'work.visit': 'Visit site',
+      'tag.pwa': 'Installable app', 'tag.sessions': 'Sessions & dues', 'tag.shop': 'Shop', 'tag.wabot': 'WhatsApp bot',
+      'tag.ecommerce': 'Online store', 'tag.appointments': 'Appointments', 'tag.catalog': 'Catalog', 'tag.filters': 'Filters', 'tag.livequotes': 'Live quotes',
+      'work.bandurrias.who': 'Trail running team · Bariloche · 80+ active members',
+      'work.bandurrias.desc': "Weekly planning, session sign-ups, membership dues, team shop, race results and a coach's panel. Works offline in the mountains and sends WhatsApp reminders.",
+      'work.paola.who': 'Nutritionist · practice and store',
+      'work.paola.desc': 'Appointments, patient management, product catalog with cart and Mercado Pago checkout. A panel so she manages everything herself.',
+      'work.poli.who': 'Car dealership',
+      'work.poli.desc': 'Public catalog with filters by brand, model and condition, and a panel where sellers load and update stock in minutes.',
+      'work.repuestos.who': 'Urgent auto parts · Bariloche',
+      'work.repuestos.desc': 'Mechanics post a request, parts shops quote within a ten-minute window, payment goes through Mercado Pago and a courier delivers. Reputation, anonymity and running accounts included.',
+      'process.label': 'How we work', 'process.h2': 'See your app before you decide. Use it in two weeks.',
+      'process.intro': 'No endless meetings, no ten-page quotes. You know what to expect at every step.',
+      'process.1.title': 'A 30-minute call', 'process.1.desc': "You tell us how you work today, what you do by hand and what's holding you back. Video call, or in person in Bariloche.", 'process.1.when': 'Free',
+      'process.2.title': 'A proposal with real screens', 'process.2.desc': 'Within days we send you on WhatsApp what your app would look like, with price and stages. You see the product before paying anything.', 'process.2.when': 'In 2 to 3 days',
+      'process.3.title': 'First stage live', 'process.3.desc': 'We start with what hurts most. We load your data, test it with you and ship it to production with your real clients.', 'process.3.when': 'In 2 weeks',
+      'process.4.title': 'Monthly fee and improvements', 'process.4.desc': 'You pay monthly, we switch on the rest in stages once the basics run, and we stay close to adjust whatever is needed.', 'process.4.when': 'Every month',
+      'terms.h3': 'Clear terms from day one.', 'terms.p': 'Built so a small business or an independent professional can afford it without risk.',
+      'terms.1.t': 'No upfront cost', 'terms.1.d': 'Loading your data and going live are included.',
+      'terms.2.t': 'No lock-in', 'terms.2.d': "If it stops being useful, you cancel. Your data is exported and it's yours.",
+      'terms.3.t': 'Price fixed for 12 months', 'terms.3.d': "The launch fee doesn't move during the first year.",
+      'terms.4.t': 'In stages', 'terms.4.d': 'Each stage works on its own. Add the next one whenever you want.',
+      'cal.label': 'Contact', 'cal.h3': 'When should we talk?',
+      'cal.p': "Pick a day that works for you on the calendar and we'll sort out the time on WhatsApp. Or just message us: we reply the same day.",
+      'wa.sublabel': 'Message us on', 'ig.sublabel': 'Follow us on', 'mail.sublabel': 'Or email',
       'legend.available': 'Available', 'legend.today': 'Today',
-      'cal.link': "Let's talk →",
-      'wa.msg': "Hi! I'm interested in scheduling a consultation with Sistemik for",
-      'wa.msg.nodate': "Hi! I'm interested in scheduling a consultation with Sistemik.",
+      'cal.link': 'Confirm on WhatsApp →', 'cal.hint': 'Monday to Friday. The first call is free, no strings attached.',
+      'wa.msg': "Hi! I'd like to schedule a call with Sistemik on",
+      'wa.msg.nodate': "Hi! I'd like to schedule a call with Sistemik.",
+      'wa.msg.estudio': "Hi! I'd like to see how Estudio would work for my accounting firm.",
       'mail.subject': 'Inquiry from sistemik.com.ar',
-      'mail.address': 'consultas@sistemik.com.ar',
-      'dash.title': 'Sales Dashboard', 'dash.subtitle': 'AI-powered · Real time', 'dash.live': 'Live',
-      'kpi.1.label': 'Sales today', 'kpi.2.label': 'Conversion', 'kpi.3.label': 'Avg. ticket',
-      'chart.label': 'Sales last 7 days',
-      'chart.days': ['Mon','Tue','Wed','Thu','Fri','Sat','Now'],
-      'ai.insight.title': 'AI Insight',
-      'ai.insight.text': 'Thursdays convert 2.4x more. Enabling auto campaign could add $48,000 this week.',
+      'foot.tagline': 'Software consultancy for small businesses and professionals. Apps, WhatsApp bots and subscription products, from Bariloche to all of Argentina.',
+      'foot.nav': 'Site', 'foot.contact': 'Contact', 'foot.privacy': 'Privacy policy',
+      'foot.made': 'Made in Patagonia, with clients across the country.',
       'cal.days': ['Su','Mo','Tu','We','Th','Fr','Sa'],
       'cal.months': ['January','February','March','April','May','June','July','August','September','October','November','December'],
     }
@@ -663,6 +1024,8 @@
   let lang = localStorage.getItem('sk-lang') || (navigator.language.toLowerCase().startsWith('es') ? 'es' : 'en');
   let current = new Date();
   let selectedDay = null;
+
+  const waUrl = (msg) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
 
   function applyLang(l) {
     lang = l;
@@ -680,69 +1043,44 @@
 
     document.getElementById('lang-toggle').textContent = l === 'es' ? 'EN' : 'ES';
 
-    document.getElementById('wa-btn').href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(T[l]['wa.msg.nodate'])}`;
-    const emailEl = document.getElementById('footer-email');
-    const emailAddr = T[l]['mail.address'];
-    emailEl.href = `mailto:${emailAddr}?subject=${encodeURIComponent(T[l]['mail.subject'])}`;
-    emailEl.textContent = emailAddr;
+    document.querySelectorAll('[data-wa]').forEach(a => {
+      const kind = a.dataset.wa;
+      a.href = waUrl(kind === 'estudio' ? T[l]['wa.msg.estudio'] : T[l]['wa.msg.nodate']);
+      if (!a.target) { a.target = '_blank'; a.rel = 'noopener'; }
+    });
+    const subject = encodeURIComponent(T[l]['mail.subject']);
+    document.getElementById('footer-email').href = `mailto:consultas@sistemik.com.ar?subject=${subject}`;
+    document.getElementById('mail-btn').href = `mailto:consultas@sistemik.com.ar?subject=${subject}`;
 
     renderDaysHeader();
-    renderChart();
     render();
-
-    if (selectedDay) {
-      const selected = document.querySelector('.cal-day.selected');
-      if (selected) updateWaLink(selectedDay);
-    }
+    if (selectedDay) updateWaLink(selectedDay);
   }
 
-  function toggleLang() {
-    applyLang(lang === 'es' ? 'en' : 'es');
-  }
+  function toggleLang() { applyLang(lang === 'es' ? 'en' : 'es'); }
 
-  const CHART_HEIGHTS = [45, 62, 58, 85, 63, 40, 91];
-
-  function renderChart() {
-    const container = document.getElementById('chart-bars');
-    if (!container) return;
-    const days = T[lang]['chart.days'];
-    container.innerHTML = CHART_HEIGHTS.map((h, i) =>
-      `<div class="bar-wrap">
-        <div class="bar${i === 6 ? ' active' : ''}" style="--h:${h}%"></div>
-        <span>${days[i]}</span>
-      </div>`
-    ).join('');
-  }
-
+  // Calendario
   function renderDaysHeader() {
-    const header = document.getElementById('cal-days-header');
-    header.innerHTML = T[lang]['cal.days'].map(d => `<div class="cal-day-name">${d}</div>`).join('');
+    document.getElementById('cal-days-header').innerHTML = T[lang]['cal.days'].map(d => `<div class="cal-day-name">${d}</div>`).join('');
   }
-
   function changeMonth(dir) {
     current = new Date(current.getFullYear(), current.getMonth() + dir, 1);
     selectedDay = null;
     document.getElementById('cal-wa-link').classList.remove('visible');
     render();
   }
-
   function render() {
     const today = new Date();
     const year = current.getFullYear();
     const month = current.getMonth();
     document.getElementById('cal-title').textContent = T[lang]['cal.months'][month] + ' ' + year;
-
     const firstDay = new Date(year, month, 1).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     const container = document.getElementById('cal-days');
     container.innerHTML = '';
-
     for (let i = 0; i < firstDay; i++) {
-      const el = document.createElement('div');
-      el.className = 'cal-day empty';
-      container.appendChild(el);
+      const el = document.createElement('div'); el.className = 'cal-day empty'; container.appendChild(el);
     }
-
     for (let d = 1; d <= daysInMonth; d++) {
       const el = document.createElement('div');
       el.textContent = d;
@@ -750,31 +1088,25 @@
       const isPast = date < new Date(today.getFullYear(), today.getMonth(), today.getDate());
       const isToday = date.toDateString() === today.toDateString();
       const isWeekend = date.getDay() === 0 || date.getDay() === 6;
-
       if (isPast || isWeekend) {
         el.className = 'cal-day past';
       } else {
         el.className = isToday ? 'cal-day today available' : 'cal-day available';
+        el.setAttribute('role', 'button'); el.tabIndex = 0;
         el.onclick = () => selectDay(d, el);
+        el.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectDay(d, el); } };
       }
       if (d === selectedDay) el.classList.add('selected');
       container.appendChild(el);
     }
   }
-
   function updateWaLink(d) {
-    const year = current.getFullYear();
-    const month = current.getMonth();
-    const monthName = T[lang]['cal.months'][month];
-    const dateStr = lang === 'es'
-      ? `${d} de ${monthName} de ${year}`
-      : `${monthName} ${d}, ${year}`;
-    const msg = encodeURIComponent(`${T[lang]['wa.msg']} ${dateStr}.`);
-    const waUrl = `https://wa.me/${WA_NUMBER}?text=${msg}`;
-    document.getElementById('wa-btn').href = waUrl;
-    document.getElementById('cal-wa-link').href = waUrl;
+    const monthName = T[lang]['cal.months'][current.getMonth()];
+    const dateStr = lang === 'es' ? `${d} de ${monthName} de ${current.getFullYear()}` : `${monthName} ${d}, ${current.getFullYear()}`;
+    const url = waUrl(`${T[lang]['wa.msg']} ${dateStr}.`);
+    document.getElementById('wa-btn').href = url;
+    document.getElementById('cal-wa-link').href = url;
   }
-
   function selectDay(d, el) {
     document.querySelectorAll('.cal-day.selected').forEach(e => e.classList.remove('selected'));
     el.classList.add('selected');
@@ -782,6 +1114,23 @@
     updateWaLink(d);
     document.getElementById('cal-wa-link').classList.add('visible');
   }
+
+  // Nav: fondo al scrollear + menú mobile
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  const burger = document.getElementById('burger');
+  burger.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  document.querySelectorAll('#mobile-menu a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }));
+
+  // Reveal al entrar en pantalla
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
   document.getElementById('year').textContent = new Date().getFullYear();
   applyLang(lang);
