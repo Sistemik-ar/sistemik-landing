@@ -52,7 +52,11 @@ abono mensual, en desktop y mobile`.
 ### Issue tracker
 
 GitHub Issues de `Sistemik-ar/sistemik-landing`, con `gh`. Ver `docs/agents/issue-tracker.md`.
-Sin etiquetas de triage creadas (`/setup-matt-pocock-skills` las crea si hiciera falta).
+
+### Triage labels
+
+Las cinco etiquetas canónicas (`needs-triage`, `needs-info`, `ready-for-agent`,
+`ready-for-human`, `wontfix`), creadas en el repo el 01/11/2026. Ver `docs/agents/triage-labels.md`.
 
 ### Domain docs
 
