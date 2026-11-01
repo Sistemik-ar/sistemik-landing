@@ -12,7 +12,7 @@ hacemos y cuánto sale.
 
 ## Fuentes de verdad, en orden
 
-1. `/Users/feliarana/Projects/sistemik/sistemik-skills`: `docs/proyectos.md` (la entrada
+1. `~/Projects/sistemik/sistemik-skills`: `docs/proyectos.md` (la entrada
    de esta landing, con qué secciones tiene y por qué), y
    `skills/propuesta-cliente/references/precios.md` (las condiciones comerciales que la
    landing muestra: sin costo inicial, sin permanencia, precio fijo 12 meses, por
